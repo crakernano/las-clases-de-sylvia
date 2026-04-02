@@ -1,0 +1,432 @@
+/* styles.css - estilos base para la web */
+
+:root{
+  --bg: #ffffff;
+  --fg: #212529;
+  --font-ui: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografía para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+h2{
+  font-weight: 700;
+  font-size: 60px;
+  letter-spacing: -2%;
+  line-height: 112%;
+  color: #1A213E;
+  text-align: center;
+}
+
+h3{
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0%;
+  line-height: 129%;
+  color: #1A213E;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 185%;
+  letter-spacing: 0% ;
+}
+
+.container {
+  padding: 1.5rem;
+  max-width: 1500px;
+}
+
+/* Añade tus estilos personalizados abajo */
+
+/* Navbar personalizado */
+:root{
+  --nav-gap: 1.25rem; /* espacio uniforme entre logo y items */
+  --nav-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.navbar-custom{
+  background: var(--bg);
+  box-shadow: var(--nav-shadow);
+}
+
+/* Adaptaciones para el navbar usando la estructura de Bootstrap */
+.navbar-custom{
+  background: var(--bg);
+  box-shadow: var(--nav-shadow);
+}
+
+/* Logo dentro de .navbar-brand */
+.navbar-custom .navbar-brand .logo{
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Espaciado uniforme entre elementos del nav (funciona tanto en fila como columna) */
+.navbar-custom .navbar-nav{
+  gap: var(--nav-gap);
+  align-items: center;
+}
+
+/* Asegurar que los links no tengan padding excesivo y se vean bien */
+.navbar-custom .nav-link{
+  color: inherit;
+  font-weight: 500;
+}
+
+.navbar-custom .nav-right{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-custom .nav-right .btn{
+  white-space: nowrap;
+}
+
+/* (Se conservan estilos originales del formulario más abajo) */
+
+.photo-container{
+  width: 429px;
+  height: 736px;
+  min-height: 736px;
+  background: #1A213E;
+  position: absolute;
+  z-index: -1;
+  transform: translate(120px, -690px);
+  border-radius: 20px;
+  border:3px;
+  /*margin-left: 12rem;*/
+}
+
+span{
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400 ;
+  font-size: 17px ;
+  line-height: 100% ;
+  letter-spacing: 0% ;
+}
+
+.contact-btn::after{
+    content: '🡥';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    border: #0066FF solid 1px;
+    background-color: #0066FF;
+    border-radius: 600px;
+    height: 36px;
+    width: 36px;
+    display: inline-flex;
+    color: #FFF;
+    padding: 9px;
+    padding-left: 11px;
+    margin-left: 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+
+.contact-btn{
+    font-weight: 700;
+    font-style: bold;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    padding: 4px 4px 4px 24px;
+    gap: 16px;
+    background-color: #FFF;
+    border: 1px solid #8AB9FF;
+    border-radius: 100px;
+
+}
+
+.discovery-box{
+  background-color: #F8F9FA;
+  padding: 48px 24px 48px 24px;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.discovery-box span{
+  font-weight: 600;
+  font-style: semi-bold;
+  font-size: 19px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #252432;
+  display: block;
+  margin-top: 1rem;
+  max-height: 280px;  
+}
+
+.service-box-subtext{
+  margin-top: 1rem;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  /*color: #8987A1;*/
+  text-align: center;
+  padding: 20px 270px;
+}
+
+.service-box{
+  background-color: #1A213E;
+  border-radius: 40px;
+  padding: 80px 56px 80px 56px;
+  gap: 64px;
+  color: #FFF;
+}
+
+.service-box h2{
+  color: #FFF;
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 109.00000000000001%;
+  font-style: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.service-box span{
+  font-weight: 700;
+  font-style: bold;
+  font-size: 18px;
+  line-height: 129%;
+  letter-spacing: 0%;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+
+}
+
+.service-img-container{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pre-title{
+  font-weight: 400;
+  font-style: regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 17.5%;
+  text-transform: uppercase;
+  color: #AD1C3B;
+  margin-bottom: 2rem;
+}
+
+.certificate-important{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 14px;
+  line-height: 185%;
+  letter-spacing: 0%;
+  color: #1E1E1E;
+  opacity: 80%;  
+}
+
+.call-link::after{
+  content: '🡥';
+}
+
+.call-link{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 14px;
+  list-style: 185%;
+  letter-spacing: 0%;
+  color: #AD1C3B;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.photo-frame{
+  width: 429px;
+  height: 536px;
+  min-height: 536px;
+  background:#F8F9FA;
+  position: absolute;
+  z-index: -1;
+  transform: translate(-40px, -565px);
+  border-radius: 20px;
+  border:3px;
+  /*margin-left: 12rem;*/
+}
+
+li{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 185%;
+  letter-spacing: 0%;
+  color: 1E1E1E;
+}
+
+.price-tag{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 38px;
+  line-height: 53.2px;
+  letter-spacing: 0%;
+  color: #050B20;
+}
+
+.price-frecuncy{
+  font-size: 16px;
+}
+
+.class-type-tag{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-style: medium;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: 0%;
+  color: #050B20
+}
+
+.card-avatar{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.card-article{
+  width: 400px !important;
+  border-radius: 16px;
+}
+
+.card-article span{
+  display: block;
+}
+
+.swiper-slide{
+  background-color: #EBF7FE;
+  padding:30px;
+  height: 332px !important;
+  
+}
+
+.form-contact{
+  background-image: url('../images/contact_background.jpg');
+  height: 850px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+.contact-form{
+  position: relative;
+  top: 40px;
+  left: 88px;
+  width: 591px;
+  padding: 47px 56px 40px 56px;
+  background-color: #FFF;
+  border-radius: 20px;
+}
+
+/* Estética: etiquetas internas (arriba) que no solapan el placeholder */
+.contact-form .field-group{
+  position: relative;
+  margin-bottom: 1.1rem;
+}
+
+.contact-form .inside-label{
+  position: absolute;
+  left: .5rem;
+  top: 0.3rem; /* etiqueta en la parte superior interna */
+  font-size: 13px;
+  color: rgba(0,0,0,0.8); /* más transparente */
+  pointer-events: none;
+}
+
+.contact-form .form-control{
+  padding: 1.6rem .75rem 0.6rem; /* mayor padding-top para dejar sitio a la etiqueta */
+  border-radius: 8px;
+}
+
+.contact-form .form-textarea{
+  min-height: 110px; /* 3-4 líneas */
+  padding-top: 1.6rem; /* igual que inputs */
+}
+
+/* placeholder más visible que la etiqueta interior */
+.contact-form .form-control::placeholder,
+.contact-form .form-textarea::placeholder{
+  color: rgba(0,0,0,.3);
+  font-size: 13px;
+
+}
+
+/* Separación extra entre campos para estética */
+.contact-form input.form-control,
+.contact-form textarea.form-textarea{
+  margin-bottom: 0.65rem;
+}
+
+/* Botón igual que .contact-btn ya definido; aseguramos tamaño */
+.contact-form .contact-btn{
+  min-width: 120px;
+}
+
+#revision-cv{display:none;}
+#presentaciones-ingles-frances{display:none;}
+
+.custom-img-item{
+    /*width: 300px;*/
+    /*height: 300px;*/
+    transition: filter 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+/* Cuando el contenedor tiene hover, todas las imágenes se ponen en escala de grises */
+.custom-img-galery:hover .custom-img-item {
+    filter: grayscale(100%);
+}
+
+/* Excepto la imagen sobre la que específicamente se hace hover, que mantiene el color */
+.custom-img-galery:hover .custom-img-item:hover {
+    filter: grayscale(0%);
+}
+
+.social-icon{
+  margin-right: 12px;
+}
+
+footer{
+  background-color: #1A213E;
+  max-width: 100% !important;
+  color: #FFF;
+}
