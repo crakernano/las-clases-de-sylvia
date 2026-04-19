@@ -38,7 +38,7 @@ h2{
 
 h3{
   font-weight: 700;
-  font-size: 22px;
+  font-size: 32px;
   letter-spacing: 0%;
   line-height: 129%;
   color: #1A213E;
@@ -193,7 +193,8 @@ span{
   letter-spacing: 0%;
   /*color: #8987A1;*/
   text-align: center;
-  padding: 20px 270px;
+  padding: 20px 190px;
+  /*padding: 20px 270px;*/
 }
 
 .service-box{
@@ -292,11 +293,21 @@ li{
   color: 1E1E1E;
 }
 
+.price-box{
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: fit-content;
+  margin-right: 50px;
+}
+
 .price-tag{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-style: bold;
-  font-size: 38px;
+  font-size: 27px;
   line-height: 53.2px;
   letter-spacing: 0%;
   color: #050B20;
