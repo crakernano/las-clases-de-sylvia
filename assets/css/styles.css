@@ -231,6 +231,10 @@ span{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+/* Asegurar que el contenedor de la imagen sirva como referencia para el overlay */
+.service-img-container{
+  position: relative;
+}
 
 .pre-title{
   font-weight: 400;
@@ -400,6 +404,27 @@ li{
   border-radius: 8px;
 }
 
+/* Estilos para el checkbox de aceptación de políticas dentro del formulario */
+.contact-form .form-privacy {
+  margin-bottom: 0.5rem;
+}
+.contact-form .form-privacy .form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
+}
+.contact-form .form-privacy .form-check-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #050B20;
+  margin-left: 0.5rem;
+}
+.contact-form .form-privacy a {
+  color: #1A213E;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 .contact-form .form-textarea{
   min-height: 110px; /* 3-4 líneas */
   padding-top: 1.6rem; /* igual que inputs */
@@ -434,6 +459,15 @@ li{
     cursor: pointer;
 }
 
+/* Asegurar que las imágenes ocupen el ancho de su contenedor para que el overlay quede sobre ellas */
+.custom-img-galery > .col-3 img.custom-img-item,
+.custom-img-galery > .col-4 img.custom-img-item,
+.service-img-container img.custom-img-item {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Cuando el contenedor tiene hover, todas las imágenes se ponen en escala de grises */
 .custom-img-galery:hover .custom-img-item {
     filter: grayscale(100%);
@@ -444,6 +478,66 @@ li{
     filter: grayscale(0%);
 }
 
+/* Cuando el contenedor tiene hover, todas las imágenes se ponen en escala de grises */
+.custom-img-galery-services:hover .custom-img-item {
+    filter: grayscale(100%);
+}
+
+/* Excepto la imagen sobre la que específicamente se hace hover, que mantiene el color */
+.custom-img-galery-services:hover .custom-img-item:hover {
+    filter: grayscale(0%);
+}
+
+/* Botón circular overlay en la esquina inferior derecha de imágenes interactuables */
+.custom-img-galery > .col-3,
+.custom-img-galery > .col-4 {
+  position: relative;
+}
+
+.custom-img-galery > .col-3::after,
+.custom-img-galery > .col-4::after,
+.service-img-container::after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 1;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
+  cursor: pointer;
+}
+
+/* Ajuste responsive: reducir offset en pantallas pequeñas */
+@media (max-width: 576px) {
+  .custom-img-galery > .col-3::after,
+  .custom-img-galery > .col-4::after,
+  .service-img-container::after {
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+}
+
+/* Estado hover: invertir colores del botón cuando se hace hover sobre el contenedor (mantener hover actual de la imagen) */
+.custom-img-galery > .col-3:hover::after,
+.custom-img-galery > .col-4:hover::after {
+  background: #1A213E;
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
 .social-icon{
   margin-right: 12px;
 }
@@ -452,4 +546,9 @@ footer{
   background-color: #1A213E;
   max-width: 100% !important;
   color: #FFF;
+}
+
+footer a{
+  color: #FFF;
+  text-decoration: none;
 }
