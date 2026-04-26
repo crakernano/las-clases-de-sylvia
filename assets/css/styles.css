@@ -324,9 +324,21 @@ li{
   font-size: 15px;
   line-height: 21px;
   letter-spacing: 0%;
+  width: 185px;
   color: #050B20
 }
-
+.additional-services-title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #1E1E1E;
+}
+.additional-services-item{
+  list-style: none !important;
+}
 .card-avatar{
   width: 60px;
   height: 60px;
