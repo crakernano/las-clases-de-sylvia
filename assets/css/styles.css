@@ -54,7 +54,10 @@ p{
 }
 
 .container {
-  padding: 1.5rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   max-width: 1500px;
 }
 
@@ -105,7 +108,11 @@ p{
   white-space: nowrap;
 }
 
-/* (Se conservan estilos originales del formulario más abajo) */
+#hero-features-block h3{font-size: 25px !important;}
+#hero-features-block div{border-right: 1px solid #ccc;}
+#hero-features-block > div:last-child {border-right: none;}
+#hero-data-block > div:last-child {border-right: none;}
+#hero-data-block div{border-right: 1px solid #ccc;}
 
 .photo-container{
   width: 429px;
@@ -426,7 +433,7 @@ li{
 
 #revision-cv{display:none;}
 #presentaciones-ingles-frances{display:none;}
-
+.description-img-mobile{display: none;}
 .custom-img-item{
     /*width: 300px;*/
     /*height: 300px;*/
@@ -453,3 +460,191 @@ footer{
   max-width: 100% !important;
   color: #FFF;
 }
+
+/* Utilidades extra para reemplazar estilos inline */
+.site-navbar{
+  padding-top: 20px;
+  padding-right: 375px;
+  padding-bottom: 20px;
+  padding-left: 212px;
+  height: 104px;
+}
+
+.nav-logo{ margin-right: 50px; }
+
+.mt-4rem{ margin-top: 4rem; }
+.mt-5rem{ margin-top: 5rem; }
+.mt-2rem{ margin-top: 2rem; }
+.mt-075{ margin-top: .75rem; }
+
+.pr-54{ padding-right: 54px; }
+.pr-50{ padding-right: 50px; }
+.pr-30{ padding-right: 30px; }
+.pr-19pct{ padding-right: 19%; }
+.pr-20pct{ padding-right: 20%; }
+
+.hero-title{
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -2%;
+  line-height: 112.00000000000001%;
+}
+.hero-lead{ margin-top: 2rem; padding-right: 20%; }
+
+.h3-spacing{ margin-top: 1rem; margin-bottom: 1rem; }
+
+.sp-150{ height: 150px; }
+.sp-100{ height: 100px; }
+
+.section-title-32{
+  font-weight: 700;
+  font-style: bold;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-family: 'Montserrat', sans-serif;
+  color: #1e1e1e;
+  display: block;
+}
+.sylvia-header-img{border-radius: 20px;}
+.testimonials-section{ max-width: 1770px; margin-left: 14.5%; }
+
+.price-row{ margin-left: 30%; margin-top: -60px; height: 100px; }
+
+.footer-row{ text-align: center; width: 80%; margin-left: 10%; margin-top: 2rem; margin-bottom: 2rem; }
+.footer-p{ padding-right: 20%; padding-left: 20%; margin-top: 2rem; font-size: 14px; font-weight: 400; }
+
+.contact-form-title{ display:block; font-weight:700; font-size:32px; line-height:40px; color:#050B20; margin-bottom:1rem; }
+.swiper-hidden{ display: none !important; }
+
+/* =======================
+   Media queries - Inicio
+   Añade y ajusta reglas para la versión mobile.
+   ======================= */
+
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+  *, *::before, *::after { box-sizing: border-box; }
+  .container, .form-contact, #hero-wrapper { max-width: 100%; overflow-x: hidden; padding-left: 0; padding-right: 0; }
+  h2{font-size: 35px; padding-right: 10px; padding-left: 10px;}
+  h3{padding-left: 10px;}
+  .navbar-custom{padding-left: 10px;padding-right: 10px;}
+  .site-navbar { padding-left: 12px !important; padding-right: 12px !important; }
+  p{padding-left: 10px; padding-right: 10px;}
+  .navbar-toggler{border: none;}
+  .sp-150, .sp-100{display: none;}
+  #hero-wrapper{margin-top: 0px; margin-left: 10px;}
+  .hero-title{font-size: 36px; padding-right: 0;}
+  .hero-lead{padding-right: 0;}
+  #hero-features-block span{margin-left: 10px;}
+  .contact-btn{font-size: 14px;}
+  .sylvia-header-img{width: 280px; margin-top: 1rem;}
+  .photo-container{width: 210px; min-height: 280px; height: 410px; transform: translate(80px, -400px);}
+  .service-box-subtext{padding: 0px}
+  .container .service-box{padding-left:10px; padding-right:0px; text-align: center;}
+  .container .service-box p{padding: 0px; font-size: 14px;line-height: 129%;}
+  .clases-img-block{width: 284px;}
+  #preparar-entrevistas, #revision-cv, #presentaciones-ingles-frances{display: none;}
+  img, .sylvia-header-img, .clases-img-block, .custom-img-item {
+  max-width: 100%;
+  height: auto;
+  }
+  .photo-container, .photo-frame {
+    right: 0;
+    left: auto;
+    transform: translate(0, 0) !important;
+    width: min(46vw, 320px); /* escala según pantalla */
+    max-width: 46vw;
+  }
+  .custom-img-item{padding-right: 10px; padding-left: 10px;}
+  .description-img-mobile{display: block; margin-bottom: 1rem; margin-left: 15px;}
+  .certificate-important{padding-left: 10px;}
+  .title-img-mobile{
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #1E1E1E;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #about-me{padding-left: 2px; padding-right: 2px;}
+  #about-me h2{font-size: 32px; margin-top: 1rem;}
+  .about-me-img{
+    width: 300px; 
+    height: auto; 
+    border-top-left-radius: 120px; 
+    border-bottom-left-radius: 40px; 
+    border-top-right-radius: 40px; 
+    border-bottom-right-radius: 40px;
+    margin-left: 10px;
+  }
+  .price-row{height: fit-content; margin-top: 1rem;margin-left: 10px; display: flex; flex-direction: column; gap: 1rem;}
+  .additional-services-item{font-size: 13px; margin-left: 10px;}
+  #conditions-block{font: 1em sans-serif; margin-top: 1rem;}
+
+  .form-contact {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .contact-form {
+    position: inherit;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .contact-form .row {
+    display: block;
+  }
+
+  .contact-form .row > .col,
+  .contact-form .col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .contact-form .field-group {
+    margin-bottom: 1rem;
+  }
+
+  .contact-form .form-control,
+  .contact-form textarea{  
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  /* .contact-form .btn {} */
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para pantallas pequeñas
+  h2 { font-size: 28px; }
+  h3 { font-size: 20px; }
+  p  { font-size: 14px; line-height: 1.5; }
+  .container { padding: 0.75rem; }
+
+  .navbar-custom .navbar-nav { gap: 0.5rem; }
+  .contact-form { padding: 16px; }
+  .contact-form .form-control, .contact-form .form-textarea { padding: 1rem; }
+
+  /* Ocultar decoraciones que consumen espacio en pantallas muy pequeñas */
+  /* .photo-container, .photo-frame, .contact-btn::after { display: none; } */
+
+  /* .service-box { padding: 24px; }
+  .discovery-box { padding: 18px; } */
+}
+
+/* =======================
+   Media queries - Fin
+   Ajusta estos valores según necesites mientras desarrollas la versión mobile.
+   ======================= */
+
