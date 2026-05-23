@@ -9,6 +9,11 @@
 
 html, body {
   height: 100%;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto; /* permitir un único scroll vertical del documento */
+
 }
 
 body {
@@ -60,7 +65,7 @@ p{
   padding-bottom: 1.5rem;
   max-width: 1500px;
 }
-
+main{width: 100%;}
 /* Añade tus estilos personalizados abajo */
 
 /* Navbar personalizado */
@@ -115,16 +120,18 @@ p{
 #hero-data-block div{border-right: 1px solid #ccc;}
 
 .photo-container{
-  width: 429px;
-  height: 736px;
-  min-height: 736px;
+  /* cuadro decorativo detrás de la foto */
+  width: 460px;
+  height: 760px;
+  min-height: 760px;
   background: #1A213E;
-  position: absolute;
-  z-index: -1;
-  transform: translate(120px, -690px);
+  position: absolute; /* anclado al contenedor padre */
+  right: 0; /* pegado a la derecha del contenedor */
+  top: 0;
+  z-index: 1; /* por detrás de la imagen (imagen tendrá z-index superior) */
   border-radius: 20px;
-  border:3px;
-  /*margin-left: 12rem;*/
+  border: 3px solid transparent;
+  transform: translate(30px, -30px); /* ligero desplazamiento para quedar visible detrás */
 }
 
 span{
@@ -174,9 +181,16 @@ span{
 
 .discovery-box{
   background-color: #F8F9FA;
-  padding: 48px 24px 48px 24px;
+  /*padding: 48px 24px 48px 24px;*/
   gap: 10px;
   border-radius: 20px;
+  margin-top: 3.5rem;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .discovery-box span{
@@ -289,6 +303,12 @@ span{
   border:3px;
   /*margin-left: 12rem;*/
 }
+.about-me-img{
+  border-top-left-radius: 120px; 
+  border-bottom-left-radius: 40px; 
+  border-top-right-radius: 40px; 
+  border-bottom-right-radius: 40px;
+}
 
 li{
   font-family: 'Montserrat', sans-serif;
@@ -358,6 +378,29 @@ li{
   border-radius: 16px;
 }
 
+/* Asegurar que las tarjetas de testimonios tengan altura visual consistente
+   y truncar el párrafo a 6 líneas con puntos suspensivos. */
+.card-article{
+  min-height: 360px; /* asegura tarjetas de igual altura */
+  display: flex;
+  flex-direction: column;
+}
+.card-article .card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+.card-article .card-body p{
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6; /* limita a 6 líneas en navegadores WebKit */
+  overflow: hidden;
+  max-height: calc(1.5em * 6);
+}
+
 .card-article span{
   display: block;
 }
@@ -365,8 +408,7 @@ li{
 .swiper-slide{
   background-color: #EBF7FE;
   padding:30px;
-  height: 332px !important;
-  
+  height: auto; /* permitir que la altura se ajuste al contenido */
 }
 
 .form-contact{
@@ -435,24 +477,28 @@ li{
 #presentaciones-ingles-frances{display:none;}
 .description-img-mobile{display: none;}
 .custom-img-item{
-    /*width: 300px;*/
-    /*height: 300px;*/
-    transition: filter 0.4s ease-in-out;
-    cursor: pointer;
+  transition: filter 0.25s ease-in-out, transform 0.25s ease-in-out;
+  cursor: pointer;
+  border-radius: 20px;
+  filter: grayscale(100%); /* por defecto en blanco y negro */
+  transform: scale(1);
 }
 
-/* Cuando el contenedor tiene hover, todas las imágenes se ponen en escala de grises */
-.custom-img-galery:hover .custom-img-item {
-    filter: grayscale(100%);
+/* Al hacer click se aplica la clase `active` y queda en color */
+.custom-img-item.active{
+  filter: none;
+  transform: scale(1.02);
 }
 
-/* Excepto la imagen sobre la que específicamente se hace hover, que mantiene el color */
-.custom-img-galery:hover .custom-img-item:hover {
-    filter: grayscale(0%);
-}
+/* Eliminar comportamiento anterior basado en hover */
+/* (antes: .custom-img-galery:hover .custom-img-item { filter: grayscale(100%); } ) */
 
 .social-icon{
   margin-right: 12px;
+  display: inline-block;
+  vertical-align:text-top;
+  height: 1em; /* escala con el tamaño de la fuente del párrafo */
+  width: auto;
 }
 
 footer{
@@ -461,10 +507,14 @@ footer{
   color: #FFF;
 }
 
+footer a{
+  color: #FFF;
+}
+
 /* Utilidades extra para reemplazar estilos inline */
 .site-navbar{
   padding-top: 20px;
-  padding-right: 375px;
+  padding-right: 200px;
   padding-bottom: 20px;
   padding-left: 212px;
   height: 104px;
@@ -482,7 +532,7 @@ footer{
 .pr-30{ padding-right: 30px; }
 .pr-19pct{ padding-right: 19%; }
 .pr-20pct{ padding-right: 20%; }
-
+#first-impression-block{ max-width: 1500px;}
 .hero-title{
   font-size: 60px;
   font-weight: 700;
@@ -490,7 +540,6 @@ footer{
   line-height: 112.00000000000001%;
 }
 .hero-lead{ margin-top: 2rem; padding-right: 20%; }
-
 .h3-spacing{ margin-top: 1rem; margin-bottom: 1rem; }
 
 .sp-150{ height: 150px; }
@@ -509,7 +558,59 @@ footer{
 .sylvia-header-img{border-radius: 20px;}
 .testimonials-section{ max-width: 1770px; margin-left: 14.5%; }
 
-.price-row{ margin-left: 30%; margin-top: -60px; height: 100px; }
+/* Evitar scroll interno del swiper en navegadores (Firefox mostraba doble scrollbar) */
+.card-container.swiper,
+.card-container .card-content,
+.card-container .swiper-wrapper {
+  overflow: visible !important;
+}
+
+/* Forzar altura automática para evitar scroll interno creado por estilos inline de Swiper */
+.card-container,
+.card-container .card-content,
+.card-container .swiper-wrapper,
+.card-container .swiper-slide {
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Si por alguna razón Swiper aplica overflow:auto a su wrapper en modo CSS, ocultamos su scrollbar en FF */
+.card-container .swiper-wrapper {
+  scrollbar-width: none; /* Firefox */
+}
+.card-container .swiper-wrapper::-webkit-scrollbar { display: none; }
+
+/* Ajustes del banner hero: eliminar gutters/padding extra para acercar la columna derecha */
+#hero-wrapper {
+  width: 100%;
+}
+/* Alineamos la columna derecha al borde: eliminamos padding y empujamos su contenido a la derecha */
+#hero-wrapper > .col-12, #hero-wrapper > .col-md-6 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Forzar que la columna derecha ocupe su espacio hasta el borde y que su contenido se alinee a la derecha.
+   Además la usamos como contenedor relativo para posicionar .photo-container absolutamente. */
+#hero-wrapper .col-md-6:last-child{
+  position: relative;
+  padding-right: 0 !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Aseguramos que la imagen dentro se pegue a la derecha del contenedor y esté por encima del cuadro */
+.sylvia-header-img{
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+.price-row{ margin-left: 25%; margin-top: -80px; height: 100px; margin-bottom: 5rem;}
 
 .footer-row{ text-align: center; width: 80%; margin-left: 10%; margin-top: 2rem; margin-bottom: 2rem; }
 .footer-p{ padding-right: 20%; padding-left: 20%; margin-top: 2rem; font-size: 14px; font-weight: 400; }
@@ -539,11 +640,21 @@ footer{
   #hero-features-block span{margin-left: 10px;}
   .contact-btn{font-size: 14px;}
   .sylvia-header-img{width: 280px; margin-top: 1rem;}
-  .photo-container{width: 210px; min-height: 280px; height: 410px; transform: translate(80px, -400px);}
-  .service-box-subtext{padding: 0px}
+  .photo-container{
+    width: min(46vw, 320px);
+    min-height: 280px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(10px, 10px) !important;
+    z-index: 1;
+    border-radius: 20px;
+  }
+  .service-box-subtext{padding: 0px; margin-right: 20px; margin-left: 20px}
   .container .service-box{padding-left:10px; padding-right:0px; text-align: center;}
   .container .service-box p{padding: 0px; font-size: 14px;line-height: 129%;}
-  .clases-img-block{width: 284px;}
+  .clases-img-block{margin-top: 2rem;}
   #preparar-entrevistas, #revision-cv, #presentaciones-ingles-frances{display: none;}
   img, .sylvia-header-img, .clases-img-block, .custom-img-item {
   max-width: 100%;
@@ -572,7 +683,7 @@ footer{
   }
   #about-me{padding-left: 2px; padding-right: 2px;}
   #about-me h2{font-size: 32px; margin-top: 1rem;}
-  .about-me-img{
+  .about-me-img img{
     width: 300px; 
     height: auto; 
     border-top-left-radius: 120px; 
@@ -580,10 +691,30 @@ footer{
     border-top-right-radius: 40px; 
     border-bottom-right-radius: 40px;
     margin-left: 10px;
+
   }
-  .price-row{height: fit-content; margin-top: 1rem;margin-left: 10px; display: flex; flex-direction: column; gap: 1rem;}
+  .price-row{
+    height: fit-content;
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding: 0 10px; /* espacio lateral para que no toque el borde */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    align-items: start;
+    box-sizing: border-box;
+  }
+  .price-box{
+    width: 100%;
+    margin-right: 0;
+    box-sizing: border-box;
+    padding: 10px;
+  }
   .additional-services-item{font-size: 13px; margin-left: 10px;}
   #conditions-block{font: 1em sans-serif; margin-top: 1rem;}
+  #conditions-block p{font-size: 13px;}
 
   .form-contact {
     display: flex;
@@ -591,6 +722,9 @@ footer{
     padding: 1rem;
   }
   
+  #hero-features-block div{border: none;}
+  .testimonials-section{margin-left: 0;}
+  .form-check-label{font-size: 13px;}
   .contact-form {
     position: inherit;
     width: 100%;
@@ -622,6 +756,7 @@ footer{
     width: 100% !important;
     box-sizing: border-box;
   }
+  .footer-p{display: none;}
   /* .contact-form .btn {} */
 }
 
