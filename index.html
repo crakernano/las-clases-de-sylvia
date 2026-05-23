@@ -4,6 +4,10 @@
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Las Clases de Sylvia</title>
+  <!-- <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> -->
+  <!-- <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon"> -->
+  <!-- <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png"> -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 
   <!-- Google Fonts: DM Sans (texto) y Montserrat (títulos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +31,7 @@
     <header class="mb-4">
       <nav class="navbar navbar-expand-lg navbar-light navbar-custom site-navbar">
         <!-- Brand / Logo (siempre visible) -->
-          <a class="navbar-brand d-flex align-items-center" href="#">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img src="assets/images/logo.svg" alt="Logo" class="nav-logo">
         </a>
 
@@ -45,60 +49,56 @@
         <!-- Contenido colapsable -->
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Clases online</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Clases de francés</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Clases de inglés</a></li> 
+            <li class="nav-item"><a class="nav-link" href="#clases-online">Clases online</a></li>
+            <li class="nav-item"><a class="nav-link" href="#clases-frances">Clases de francés</a></li>
+            <li class="nav-item"><a class="nav-link" href="#clases-ingles">Clases de inglés</a></li> 
           </ul>
 
           <!-- Elemento alineado a la derecha en pantallas >= lg, en collapse aparece debajo -->
           <div class="ms-auto nav-right">
-            <a class="btn btn-outline-primary contact-btn" href="#">Reserva tu primera clase</a>
+            <a class="btn btn-outline-primary contact-btn" href="#contact-form">Reserva tu primera clase</a>
           </div>
         </div>
       </nav>
     </header>
+    
+    <main class="container-fluid" id="first-impression-block">
+      <div class="row mt-4rem" data-aos="fade-up" id="hero-wrapper">
 
-    <main class="container">
-        <div class="row mt-4rem" data-aos="fade-up" id="hero-wrapper">
-          <div class="col-12 col-md-6 mt-5rem pr-54">
-            <h1 class="hero-title">Domina un nuevo idioma y expande tus oportunidades</h1>
-                
-            <p class="hero-lead">
-            Aprender otro idioma no es solo aprender palabras,
-            es aprender a pensar y a expresarse con claridad en otra lengua.</p>
-                
-            <p class="hero-lead">
-            Trabajo con adultos y profesionales que necesitan comunicarse con claridad y precisión en inglés o francés a
-            través de <b>clases online personalizadas.</b></p>
+        <div class="col-12 col-md-6 mt-5rem pr-54">
+          <h1 class="hero-title">Domina un nuevo idioma y expande tus oportunidades</h1>
+          <p class="hero-lead">
+          Aprender otro idioma no es solo aprender palabras,
+          es aprender a pensar y a expresarse con claridad en otra lengua.</p>
+          <p class="hero-lead">
+          Trabajo con adultos y profesionales que necesitan comunicarse con claridad y precisión en inglés o francés a
+          través de <b>clases online personalizadas.</b></p>
+          <a class="btn btn-outline-primary contact-btn mt-2rem" href="#contact-form">Reserva tu primera clase</a>
 
-               <a class="btn btn-outline-primary contact-btn mt-2rem" href="#">Reserva tu primera clase</a>
+          <div class="row mt-4rem" id="hero-features-block">
+          <div class="col-12 col-md-4">
+            <h3 class="h3-spacing">Idiomas</h3>
+            <span>Francés e Inglés</span>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3 class="h3-spacing">Método único</h3>
+            <span>Acompañamiento integral</span>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3 class="h3-spacing">Télefono</h3>
+            <span>681 380 498</span>
+          </div>                    
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-5rem">
+          <img src="assets/images/sylvia_header.jpg" alt="Sylvia" class="sylvia-header-img">
+          <div class="photo-container"></div>
+        </div>
+      </div><!-- FIN DEL BLOQUE DOMINA IDIOMA -->
+    </main>
 
-               <div class="row mt-4rem" id="hero-features-block">
-                <div class="col-12 col-md-4">
-                  <h3 class="h3-spacing">Idiomas</h3>
-                  <span>Francés e Inglés</span>
-                </div>
-                <div class="col-12 col-md-4">
-                  <h3 class="h3-spacing">Método único</h3>
-                  <span>Acompañamiento integral</span>
-                </div>
-                <div class="col-12 col-md-4">
-                  <h3 class="h3-spacing">Télefono</h3>
-                  <span>681 380 498</span>
-                </div>                    
-               </div>
-                <!-- <div class="row" id="hero-data-block">
-                    <div class="col-12 col-md-4"><span>Francés e Inglés</span></div>
-                    <div class="col-12 col-md-4"><span>Acompañamiento integral</span></div>
-                    <div class="col-12 col-md-4"><span>681 380 498</span></div>                    
-                </div> -->
-            </div>
-            <div class="col-12 col-md-6">                               
-                <img src="assets/images/sylvia_header.jpg" alt="Sylvia" class="sylvia-header-img">
-                <div class="photo-container"></div>
-            </div>
-        </div> <!-- FIN DEL BANNER INICIAL -->
 
+    <main class="container" data-aos="fade-up">
         <div class="sp-150"></div>
 
         <div class="container" data-aos="fade-up">
@@ -138,7 +138,7 @@
         </div><!-- FIN DEL BLOQUE DE 4 COLUMNAAS -->
         
         <div class="sp-150"></div>
-        <div class="container service-box" data-aos="fade-up">
+        <div class="container service-box" data-aos="fade-up" id="clases-online">
           
           <h2>Clases particulares de inglés y francés online</h2>
           <p class="service-box-subtext">Gracias a mi experiencia en enseñanza de idiomas y comunicación profesional, puedo acompañarte estés donde estés.</p>
@@ -187,7 +187,7 @@
               desarrollar una comunicación clara, estructurada y eficaz en inglés.</p>
 
               <span class="certificate-important" style="display: block;">FCE, CAE y CPE</span>
-                <a class="btn btn-outline-primary contact-btn mt-2rem" href="#">Reserva tu primera clase</a>
+                <a class="btn btn-outline-primary contact-btn mt-2rem" href="#contact-form">Reserva tu primera clase</a>
             </div>
             <div class="col-12 col-md-6">
               <img src="assets/images/clases_frances.png" class="clases-img-block">              
@@ -195,12 +195,12 @@
           </div>
         </div><!-- FIN BLOQUE CLASES DE FRANCES -->
         <div class="sp-150"></div>
-        <div class="container">
+        <div class="container" data-aos="fade-up" id="clases-ingles">
           <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 order-2 order-md-1">
               <img src="assets/images/clases_ingles.png" class="clases-img-block">              
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 order-1 order-md-2">
               <h3 class="h3-spacing">Clases de francés online</h3>
               <p class="pr-30">
               Viví y estudié en París hasta finalizar mis estudios universitarios en la Universidad de la
@@ -218,13 +218,13 @@
 
                   
               <span class="certificate-important" style="display: block;">DELF B1, B2 y DALF C1 y C2</span>
-              <a class="btn btn-outline-primary contact-btn" href="#" style="margin-top: 2rem;">Reserva tu primera clase</a>
+              <a class="btn btn-outline-primary contact-btn" href="#contact-form" style="margin-top: 2rem;">Reserva tu primera clase</a>
             </div>
           </div>
         </div><!-- FIN BLOQUE CLASES DE INGLES -->
 
         <div class="sp-100"></div>
-        <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up" id="clases-frances">
           <div class="row">
             <div class="col-12 col-md-6">
               <h3 style="margin-top: 1rem; margin-bottom: 1rem;">Francés para vivir o trabajar en Francia</h3>
@@ -260,58 +260,70 @@
               <img src="assets/images/preparacion_entrevista_trabajo.jpg" class="custom-img-item" onclick="change2PrepararEntrevistas()"/> 
               <div class="description-img-mobile">
                 <span class="title-img-mobile"> Preparación de entrevistas de trabajo</span>
-                <p>Las sesiones están enfocadas en preparar las preguntas tipo que se hacen en este tipo de entrevistas. 
-                  De modo a poder dar respuestas que transmitan la información más relevante para el cargo al que se postula. 
-                  El objetivo es poder desenvolverse con confianza y cómodamente en un entorno laboral. La sesión se llevará a cabo de forma virtual</p>
-                <a href="#" class="call-link">Reserva tu clase </a>
+                <p>En estas sesiones trabajamos la preparación de entrevistas en inglés o francés a partir de
+                  situaciones reales. Trabajamos las preguntas más habituales y la forma de estructurar respuestas claras,
+                  relevantes y adaptadas al puesto.
+                  El objetivo es que puedas comunicarte con seguridad y desenvolverte con naturalidad en un
+                  entorno profesional.</p>
+                <p>Simulamos entrevistas reales para trabajar tu respuesta en contexto.</p>
               </div>
             </div>
             <div class="col-12 col-md-4">
               <img src="assets/images/revision_curriculum_vitae.jpg" class="custom-img-item" onclick="change2RevisionCV()"/> 
               <div class="description-img-mobile">
                 <span class="title-img-mobile">Revisión de Curriculum Vitae</span>
-                <p>El objetivo de la sesión es la revisión del Curriculum Vitae o de la carta de presentación. Es una sesión personalizada en la que se discuten
-                  las ideas que el candidato o la candidata quiere expresar. Con el objetivo de poder plasmarlas en los documentos y poder comunicar la información de forma efectiva. Para
-                  estas sesiones es necesario enviar el documento con un mínimo de 48 horas de antelación a la sesión.</p>
-                <a href="#" class="call-link">Reserva tu clase </a>
+                <p>En estas sesiones trabajamos la revisión de tu currículum en inglés o francés para adaptarlo a contextos 
+                  profesionales reales. Analizamos la estructura, el lenguaje y la forma de presentar tu experiencia para que 
+                  tu perfil resulte claro, coherente y relevante. El objetivo es que tu currículum refleje tu valor profesional y 
+                  se ajuste a las expectativas del mercado al que te diriges.</p>
               </div>
             </div>
             <div class="col-12 col-md-4">
               <img src="assets/images/presentaciones_ingles_frances.jpg" class="custom-img-item" onclick="change2Presentaciones()"/> 
               <div class="description-img-mobile">
                 <span class="title-img-mobile">Presentaciones en inglés y francés</span>
-                <p>Las sesiones son totalmente personalizadas, dependen del tipo de presentación que se quiera preparar. Traducir un texto, preparar una
-                  presentación para una reunión, hablar delante de una audiencia más amplia o simplemente hablar de temas interesantes para poder mantener el nivel del idioma activo.</p>
-                <a href="#" class="call-link">Reserva tu clase </a>
+                <p>En estas sesiones trabajamos la preparación de presentaciones en inglés o francés en contextos profesionales. 
+                  Nos centramos en estructurar el mensaje, organizar las ideas y adaptar el discurso para que sea claro, preciso y 
+                  fácil de seguir. El objetivo es que puedas expresarte con seguridad, transmitir tu mensaje con impacto y desenvolverte 
+                  con naturalidad ante distintos interlocutores.</p>
               </div>
             </div>
           </div>          
           <div class="row mt-4rem" id="preparar-entrevistas">
             <div class="col-6 pr-19pct"><span class="section-title-32">Preparación de entrevistas de trabajo</span></div>
             <div class="col-6">
-              <p>Las sesiones están enfocadas en preparar las preguntas tipo que se hacen en este tipo de entrevistas. 
-                 De modo a poder dar respuestas que transmitan la información más relevante para el cargo al que se postula. 
-                 El objetivo es poder desenvolverse con confianza y cómodamente en un entorno laboral. La sesión se llevará a cabo de forma virtual</p>
-              <a href="#" class="call-link">Reserva tu clase </a>
+                <p>En estas sesiones trabajamos la preparación de entrevistas en inglés o francés a partir de
+                  situaciones reales. Trabajamos las preguntas más habituales y la forma de estructurar respuestas claras,
+                  relevantes y adaptadas al puesto.
+                  El objetivo es que puedas comunicarte con seguridad y desenvolverte con naturalidad en un
+                  entorno profesional.</p>
+                <p>Simulamos entrevistas reales para trabajar tu respuesta en contexto.</p>
             </div>
           </div><!-- FIN PREPARAR ENTREVISTAS DE TRABAJO-->
           
           <div class="row mt-4rem" id="revision-cv">
             <div class="col-6 pr-19pct"><span class="section-title-32">Revisión de Curriculum Vitae</span></div>
             <div class="col-6">
-              <p>El objetivo de la sesión es la revisión del Curriculum Vitae o de la carta de presentación. Es una sesión personalizada en la que se discuten
-                las ideas que el candidato o la candidata quiere expresar. Con el objetivo de poder plasmarlas en los documentos y poder comunicar la información de forma efectiva. Para
-                estas sesiones es necesario enviar el documento con un mínimo de 48 horas de antelación a la sesión.</p>
-              <a href="#" class="call-link">Reserva tu clase </a>
+              <p>En estas sesiones trabajamos la revisión de tu currículum en inglés o francés para adaptarlo
+                a contextos profesionales reales.
+                Analizamos la estructura, el lenguaje y la forma de presentar tu experiencia para que tu
+                perfil resulte claro, coherente y relevante.
+                El objetivo es que tu currículum refleje tu valor profesional y se ajuste a las expectativas del
+                mercado al que te diriges.</p>
+
             </div>
           </div><!-- FIN REVISION DE CV-->
           
           <div class="row mt-4rem" id="presentaciones-ingles-frances">
             <div class="col-6 pr-19pct"><span class="section-title-32">Presentaciones en inglés y francés</span></div>
             <div class="col-6">
-              <p>Las sesiones son totalmente personalizadas, dependen del tipo de presentación que se quiera preparar. Traducir un texto, preparar una
-                presentación para una reunión, hablar delante de una audiencia más amplia o simplemente hablar de temas interesantes para poder mantener el nivel del idioma activo.</p>
-              <a href="#" class="call-link">Reserva tu clase </a>
+              <p>En estas sesiones trabajamos la preparación de presentaciones en inglés o francés en contextos profesionales.
+                  Nos centramos en estructurar el mensaje, organizar las ideas y adaptar el discurso para que
+                  sea claro, preciso y fácil de seguir.
+                  El objetivo es que puedas expresarte con seguridad, transmitir tu mensaje con impacto y
+                  desenvolverte con naturalidad ante 
+                  distintos interlocutores.</p>
+
             </div>
           </div><!-- FIN PRESENTACIONES-->
 
@@ -321,11 +333,14 @@
 
         <div class="container" data-aos="fade-up" id="about-me">
           <div class="row">
-            <div class="col-12 col-md-6"><img src="assets/images/sylvia.jpg" class="about-me-img"><div class="photo-frame"></div></div>
-            <div class="col-12 col-md-6">
-              <h2>Un poquito más sobre mi</h2>
-              <p>
-                Trabajo desde hace <b>más de 25 años en el ámbito de los idiomas</b> y la comunicación
+            <div class="col-12 col-md-6 order-2 order-md-1">
+              <img src="assets/images/sylvia.jpg" class="about-me-img" />
+              <div class="photo-frame"></div>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2">
+              <h2 style="font-size: 32px; text-align: start;">Un poquito más sobre mi</h2>
+
+              <p style="margin-top: 2rem;">Trabajo desde hace <b>más de 25 años en el ámbito de los idiomas</b> y la comunicación
                 profesional.</p>
 
                 <p>Mi experiencia incluye la docencia, la traducción y la interpretación de conferencia, ámbitos
@@ -348,35 +363,32 @@
                   <span class="price-tag">210€</span><span class="price-frecuncy">/mes</span>
                   <p class="class-type-tag">1 CLASE POR SEMANA DE 1H30</p>
                 </div>
-              </div> -->
-
-              
-            </div>
-            
-            <div class="row price-row">
-
-                <div class="col-12 col-md-3 price-box" >
-                  <span class="price-tag">129€</span>
-                  <p class="class-type-tag">3 clases al mes</p>
-                </div>
-
-                <div class="col-12 col-md-3 price-box" >
-                  <span class="price-tag">150€</span>
-                  <p class="class-type-tag">4 clases al mes</p>
-                </div>
-
-                <div class="col-12 col-md-3 price-box" >
-                  <span class="price-tag">225€</span>
-                  <p class="class-type-tag">6 clases al mes</p>
-                </div>
-
-                <div class="col-12 col-md-3 price-box" >
-                  <span class="price-tag">300€</span>
-                  <p class="class-type-tag">8 Clases al mes</p>
-                </div>
-            </div>            
+              </div> -->             
+            </div>     
           </div>
         </div>
+        <div class="row price-row">
+
+            <div class="col-12 col-md-3 price-box" >
+              <span class="price-tag">129€</span>
+              <p class="class-type-tag">3 clases al mes</p>
+            </div>
+
+            <div class="col-12 col-md-3 price-box" >
+              <span class="price-tag">150€</span>
+              <p class="class-type-tag">4 clases al mes</p>
+            </div>
+
+            <div class="col-12 col-md-3 price-box" >
+              <span class="price-tag">225€</span>
+              <p class="class-type-tag">6 clases al mes</p>
+            </div>
+
+            <div class="col-12 col-md-3 price-box" >
+              <span class="price-tag">300€</span>
+              <p class="class-type-tag">8 Clases al mes</p>
+            </div>
+        </div>  
         <div class="row" style="margin-top: 2rem;">
           <div class="col-12 col-md-6">
             <p class="additional-services-title">SERVICIOS ADIONALES</p>
@@ -404,29 +416,7 @@
             <div class="card-container swiper">
               <div class="card-content">
                 <div class="swiper-wrapper">
-                  <!-- Article -->
-                  <article class="card-article swiper-slide">
-                    <div class="card-body">
-                        <p>“Sylvia es muy profesional, las clases son amenas e interesantes y el aprendizaje sólido.Yo comienzo desde cero con ingles y 
-                          cada vez me voy encontrando mas segura tanto en escribir, como hablar, aunque mi nivel sea inicial. La recomiendo totalmente.”</p>
-                      <div class="card-shadow"></div>
-                      <div class="card-footer">
-                        <div class="row">
-                          <div class="col-6">
-                            <h3 class="h3-spacing">Francés para vivir o trabajar en Francia</h3>
-                              src="assets/images/testimonios/maria_camilo_tiscordio.jpg"
-                              alt="User 1"
-                              class="card-avatar"
-                            />
-                          </div>
-                          <div class="col-9">
-                            <span class="card-name">María Camilo Tiscordio</span>
-                            <span class="card-role">Hace un mes</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
+
                   <!-- Article -->
                   <article class="card-article swiper-slide">
                     <div class="card-body">
@@ -517,22 +507,18 @@
           <!-- FINAL DE TESTIMONIOS-->        
         
         <div class="sp-150"></div>
-        <div class="form-contact">
+        <div class="form-contact" id="contact-form" data-aos="fade-up">
           <form class="contact-form">
             <span class="contact-form-title">Contáctame o reserva tu primera clase</span>
-            <div class="row" data-aos="fade-up">
-              <div class="col">
-                <div class="field-group">
-                  <label class="inside-label" for="firstName">Nombre</label>
-                  <input id="firstName" type="text" class="form-control" placeholder="First name" aria-label="First name">
-                </div>
-              </div>
-              <div class="col">
-                <div class="field-group">
-                  <label class="inside-label" for="lastName">Apellido</label>
-                  <input id="lastName" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                </div>
-              </div>
+            
+            <div class="field-group">
+              <label class="inside-label" for="firstName">Nombre</label>
+              <input id="firstName" type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+
+            <div class="field-group">
+              <label class="inside-label" for="lastName">Apellido</label>
+              <input id="lastName" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
             </div>
 
             <div class="field-group">
