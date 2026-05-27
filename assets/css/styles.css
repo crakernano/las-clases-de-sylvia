@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin-top: 0;
 }
-
+h1{color: #1A213E;}
 h2{
   font-weight: 700;
   font-size: 60px;
@@ -640,30 +640,39 @@ footer a{
   h3{padding-left: 10px;}
   .navbar-custom{padding-left: 10px;padding-right: 10px;}
   .site-navbar { padding-left: 12px !important; padding-right: 12px !important; }
-  p{padding-left: 10px; padding-right: 10px;}
+  p{padding-left: 2.1rem; padding-right: 10px;}
   .navbar-toggler{border: none;}
   .sp-150, .sp-100{display: none;}
-  #hero-wrapper{margin-top: 0px; /*margin-left: 10px;*/}
-  .hero-title{font-size: 36px; padding-right: 0; margin-left: 10px;}
+  #hero-wrapper{margin-top: 0px; overflow: visible; /*margin-left: 10px;*/}
+  #hero-wrapper .col-md-6:last-child{justify-content: center;}
+  .hero-title{font-size: 36px; padding-right: 0; margin-left: 20px; margin-top: 3rem;}
   .hero-lead{padding-right: 0;}
+  .hero-lead p{margin-left: 10;}
   #hero-features-block span{margin-left: 10px;}
   .contact-btn{font-size: 14px;}
-  .sylvia-header-img{width: 280px; margin-top: 1rem;}
+  .sylvia-header-img{width: 300px; margin-top: 1rem; margin-left: -5px !important;}
   .photo-container{
     width: min(46vw, 320px);
-    min-height: 280px;
+    min-height: 470px;
     height: auto;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -9px;
     transform: translate(10px, 10px) !important;
     z-index: 1;
     border-radius: 20px;
+    overflow: visible;
   }
   .service-box-subtext{padding: 0px; margin-right: 20px; margin-left: 20px}
-  .container .service-box{padding-left:10px; padding-right:0px; text-align: center;}
-  .container .service-box p{padding: 0px; font-size: 14px;line-height: 129%; text-align: start;}
-  .clases-img-block{margin-top: 2rem;}
+  .container .service-box{padding-left:0px; padding-right:0px; text-align: center;}
+  .container .service-box p{padding: 0px; font-size: 16px;line-height: 172%; text-align: start; margin-left: 40px; margin-right: 40px; margin-top: 1.5rem;}
+  .service-box span{margin-bottom: 1.5rem; margin-left: 2.1rem; font-size: 22px !important;}
+  .service-box-subtitle{text-align: start;font-size: 23px; margin-left: 35px;}
+  .service-box-subtitle span{font-size: 23px; margin-left: 35px;}
+  .service-box h2{font-size: 42px;}
+  .service-box-subtitle{margin-top: 2rem; display: block;}  
+  .service-box-item{margin-top: 2rem;}
+  .clases-img-block{margin-top: 2rem; margin-left: 6px !important;}
   #preparar-entrevistas, #revision-cv, #presentaciones-ingles-frances{display: none;}
   img, .sylvia-header-img, .clases-img-block, .custom-img-item {
   max-width: 100%;
@@ -671,18 +680,24 @@ footer a{
   margin-left: 10px;
   }
   .photo-container, .photo-frame {
-    right: 0;
+    right: 7;
     left: auto;
     transform: translate(0, 0) !important;
-    width: min(46vw, 320px); /* escala según pantalla */
-    max-width: 46vw;
+    width: min(70vw, 320px); /* escala según pantalla */
+    max-width: 76vw;
   }
+
+  .discovery-box{min-height:fit-content; padding-top: 2rem;}
+  .discovery-box span{font-size: 26px; margin-left: 10px;}
   .discovery-box p{
     padding-left: 0px !important;
+    padding-top: 1rem;
+    margin-left: 10px;
+
   }
   .custom-img-item{padding-right: 10px; padding-left: 10px;}
   .description-img-mobile{display: block; margin-bottom: 1rem; margin-left: 15px;}
-  .certificate-important{padding-left: 10px;}
+  .certificate-important{margin-left: 2.1rem;}
   .title-img-mobile{
     font-weight: 700;
     font-style: bold;
@@ -693,9 +708,26 @@ footer a{
     display: block;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: 10px;
   }
-  #about-me{padding-left: 2px; padding-right: 2px;}
-  #about-me h2{font-size: 32px; margin-top: 1rem;}
+  .custom-img-item{ filter: none; margin-left: 20px !important; width: 90%;}
+  .service-img-container{
+    height: 180px;
+    width: 100%;
+    margin-left: -10px !important;
+  }
+  .service-img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;    
+  }
+  .h3-spacing{ font-size: 22px; margin-left: 2.1rem; padding-left: 0px;}
+  .clases-particulares p{padding: 0px 10px 0px 10px}
+  .clases-particulares h3{margin-left: 10px;}
+  #about-me{padding-left: 2px; padding-right: 2px; overflow: visible;}
+  #about-me h2{font-size: 32px; margin-top: 1rem; margin-left: 10px;}
+  #about-me p{margin-left: 10px;}
   .about-me-img img{
     width: 300px; 
     height: auto; 
@@ -734,8 +766,8 @@ footer a{
     justify-content: center;
     padding: 1rem;
   }
-  
-  #hero-features-block div{border: none;}
+  .contact-btn{margin-left: 20px;}
+  #hero-features-block div{border: none; text-align: start; margin-left: 20px;}
   .testimonials-section{margin-left: 0;}
   .form-check-label{font-size: 13px;}
   .contact-form {
