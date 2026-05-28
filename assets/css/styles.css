@@ -648,7 +648,7 @@ footer a{
   .hero-title{font-size: 36px; padding-right: 0; margin-left: 20px; margin-top: 3rem;}
   .hero-lead{padding-right: 0;}
   .hero-lead p{margin-left: 10;}
-  #hero-features-block span{margin-left: 10px;}
+  #hero-features-block span{margin-left: 2.1rem}
   .contact-btn{font-size: 14px;}
   .sylvia-header-img{width: 300px; margin-top: 1rem; margin-left: -5px !important;}
   .photo-container{
@@ -686,7 +686,7 @@ footer a{
     width: min(70vw, 320px); /* escala según pantalla */
     max-width: 76vw;
   }
-
+  #discovery-section{overflow: visible;}
   .discovery-box{min-height:fit-content; padding-top: 2rem;}
   .discovery-box span{font-size: 26px; margin-left: 10px;}
   .discovery-box p{
@@ -696,7 +696,7 @@ footer a{
 
   }
   .custom-img-item{padding-right: 10px; padding-left: 10px;}
-  .description-img-mobile{display: block; margin-bottom: 1rem; margin-left: 15px;}
+  .description-img-mobile{display: block; margin-bottom: 1rem; margin-left: 0px; margin-right: 20px;}
   .certificate-important{margin-left: 2.1rem;}
   .title-img-mobile{
     font-weight: 700;
@@ -708,7 +708,9 @@ footer a{
     display: block;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: 10px;
+    margin-left: 2.1rem;
+    margin-top: 2rem;
+    margin-right: 10px;
   }
   .custom-img-item{ filter: none; margin-left: 20px !important; width: 90%;}
   .service-img-container{
@@ -725,9 +727,14 @@ footer a{
   .h3-spacing{ font-size: 22px; margin-left: 2.1rem; padding-left: 0px;}
   .clases-particulares p{padding: 0px 10px 0px 10px}
   .clases-particulares h3{margin-left: 10px;}
-  #about-me{padding-left: 2px; padding-right: 2px; overflow: visible;}
-  #about-me h2{font-size: 32px; margin-top: 1rem; margin-left: 10px;}
-  #about-me p{margin-left: 10px;}
+  div#about-me{height:fit-content; overflow: hidden;}
+  #about-me{padding-left: 2px; padding-right: 2px; overflow: visible; height: auto;}
+  #about-me h2{font-size: 32px; margin-top: 1rem; margin-left: 2.1rem; padding-left: 0px;}
+  /* #about-me p{margin-left: 10px;} */
+  .about-me-img{
+    max-width: 90%;  
+    margin-left: 1.1rem;
+  }
   .about-me-img img{
     width: 300px; 
     height: auto; 
@@ -735,9 +742,9 @@ footer a{
     border-bottom-left-radius: 40px; 
     border-top-right-radius: 40px; 
     border-bottom-right-radius: 40px;
-    margin-left: 10px;
-
+    
   }
+  .photo-frame {transform: translate(6px, -373px) !important; height: 300px;min-height: 0px;}
   .price-row{
     height: fit-content;
     margin-top: 1rem;
@@ -757,7 +764,7 @@ footer a{
     box-sizing: border-box;
     padding: 10px;
   }
-  .additional-services-item{font-size: 13px; margin-left: 10px;}
+  .additional-services-item{font-size: 13px; margin-left: 2.1rem;}
   #conditions-block{font: 1em sans-serif; margin-top: 1rem;}
   #conditions-block p{font-size: 13px;}
 
@@ -803,6 +810,17 @@ footer a{
   }
   .footer-p{display: none;}
   /* .contact-form .btn {} */
+
+  /*MENU*/
+  .offcanvas {
+  width: 320px;
+  background-color: white;
+}
+
+.offcanvas-body .nav-link {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
 }
 
 @media (max-width: 480px) {
