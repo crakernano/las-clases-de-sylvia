@@ -1,6 +1,8 @@
 //ToDo: Optimizar esto
 // Funciones para mostrar/ocultar secciones por id
 function change2RevisionCV(){
+    if (window.innerWidth <= 768) {return;}
+    if (window.matchMedia("(max-width: 768px)").matches) {return;}
     const presentaciones = document.getElementById('presentaciones-ingles-frances');
     const preparar = document.getElementById('preparar-entrevistas');
 	const revision = document.getElementById('revision-cv');
@@ -11,6 +13,7 @@ function change2RevisionCV(){
 }
 
 function change2PrepararEntrevistas(){
+    if (window.innerWidth <= 768) {return;}
     const presentaciones = document.getElementById('presentaciones-ingles-frances');
     const preparar = document.getElementById('preparar-entrevistas');
 	const revision = document.getElementById('revision-cv');
@@ -21,6 +24,7 @@ function change2PrepararEntrevistas(){
 }
 
 function change2Presentaciones(){
+    if (window.innerWidth <= 768) {return;}
     const presentaciones = document.getElementById('presentaciones-ingles-frances');
     const preparar = document.getElementById('preparar-entrevistas');
 	const revision = document.getElementById('revision-cv');

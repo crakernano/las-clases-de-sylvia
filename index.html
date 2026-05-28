@@ -36,29 +36,57 @@
         </a>
 
         <!-- Toggler -->
-        <button class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#mainNav" 
-                aria-controls="mainNav" 
-                aria-expanded="false" 
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
                 aria-label="Toggle navigation">
+
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Contenido colapsable -->
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#clases-online">Clases online</a></li>
-            <li class="nav-item"><a class="nav-link" href="#clases-frances">Clases de francés</a></li>
-            <li class="nav-item"><a class="nav-link" href="#clases-ingles">Clases de inglés</a></li> 
-          </ul>
+          <div class="offcanvas offcanvas-end" 
+              tabindex="-1" 
+              id="mainNav" 
+              aria-labelledby="mainNavLabel">
 
-          <!-- Elemento alineado a la derecha en pantallas >= lg, en collapse aparece debajo -->
-          <div class="ms-auto nav-right">
-            <a class="btn btn-outline-primary contact-btn" href="#contact-form">Reserva tu primera clase</a>
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="mainNavLabel">Menú</h5>
+
+              <button type="button"
+                      class="btn-close"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close">
+              </button>
+            </div>
+
+            <div class="offcanvas-body">
+
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#clases-online">Clases online</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#clases-frances">Clases de francés</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#clases-ingles">Clases de inglés</a>
+                </li>
+              </ul>
+
+              <div class="mt-4">
+                <a class="btn btn-outline-primary w-100"
+                  href="#contact-form">
+                  Reserva tu primera clase
+                </a>
+              </div>
+
+            </div>
           </div>
-        </div>
       </nav>
     </header>
     
@@ -98,7 +126,7 @@
     </main>
 
 
-    <main class="container" data-aos="fade-up">
+    <main class="container" data-aos="fade-up" id="discovery-section">
         <div class="sp-150"></div>
 
         <div class="container" data-aos="fade-up">
@@ -227,13 +255,13 @@
         <div class="container" data-aos="fade-up" id="clases-frances">
           <div class="row">
             <div class="col-12 col-md-6" style="padding-right: 50px;">
-              <h3 style="margin-top: 1rem; margin-bottom: 1rem;">Francés para vivir o trabajar en Francia</h3>
+              <h3 class="h3-spacing">Francés para vivir o trabajar en Francia</h3>
               <p>Muchos de mis alumnos están preparando su traslado a Francia por motivos profesionales o
                 personales. El trabajo se centra en desarrollar una comunicación clara y natural en francés en
                 situaciones reales.</p>
 
               <p>Trabajamos especialmente:</p>
-              <ul>
+              <ul style="margin-left: 2.1rem;">
                 <li>comunicación en situaciones cotidianas</li>
                 <li>comprensión del francés hablado en contextos reales</li>
                 <li>interacción en entornos profesionales</li>
@@ -334,13 +362,12 @@
 
         <div class="container" data-aos="fade-up" id="about-me">
           <div class="row">
-            <div class="col-12 col-md-6 order-2 order-md-1">
+            <div class="col-12 col-md-6 order-1 order-md-1" style="height: 360px;">
               <img src="assets/images/sylvia.jpg" class="about-me-img" />
               <div class="photo-frame"></div>
             </div>
-            <div class="col-12 col-md-6 order-1 order-md-2">
+            <div class="col-12 col-md-6 order-2 order-md-2">
               <h2 style="font-size: 32px; text-align: start;">Un poquito más sobre mi</h2>
-
               <p style="margin-top: 2rem;">Trabajo desde hace <b>más de 25 años en el ámbito de los idiomas</b> y la comunicación
                 profesional.</p>
 
@@ -350,26 +377,10 @@
                 <p>Esta experiencia define mi forma de enseñar: no se trata solo de aprender un idioma, sino
                 de saber <b>utilizarlo con seguridad, naturalidad y precisión.</b></p>
                 <p>Acompaño a mis alumnos en un proceso de aprendizaje sólido y adaptado a sus objetivos.</p>
-              </p>
-              <!-- <div class="row" style="margin-top: 4rem;">
-                <div class="col-4">
-                 <span class="price-tag">40€</span>
-                 <p class="class-type-tag">CLASE ORDINARIA DE UNA 1H</p>
-                </div>
-                <div class="col-4">
-                 <span class="price-tag">140€</span><span class="price-frecuncy">/mes</span>
-                 <p class="class-type">1 CLASE POR SEMANA DE 1H</p>
-                </div>
-                <div class="col-4">
-                  <span class="price-tag">210€</span><span class="price-frecuncy">/mes</span>
-                  <p class="class-type-tag">1 CLASE POR SEMANA DE 1H30</p>
-                </div>
-              </div> -->             
             </div>     
           </div>
         </div>
         <div class="row price-row">
-
             <div class="col-12 col-md-3 price-box" >
               <span class="price-tag">129€</span>
               <p class="class-type-tag">3 clases al mes</p>
@@ -404,12 +415,13 @@
             </p>
           </div>
         </div>
-      </div><!-- FIN BLOQUE SOBRE MI -->
+      </div>
+      <!-- FIN BLOQUE SOBRE MI -->
   </main>
       <div class="sp-100"></div>
         <div class="container" data-aos="fade-up">
           <div class="row">
-            <div class="col-4"><h2 style="text-align: start;">Testimonios</h2></div>
+            <div class="col-4"><h2 style="text-align: start; margin-left: 2.1rem;">Testimonios</h2></div>
             <!--<div class="col-8" style="text-align: end;"><span>Calificación de 4.7 / 5 basada en 80 reseñas. Mostrando reseñas de 4 y 5 estrellas.</span></div>-->
           </div>
           </div>
