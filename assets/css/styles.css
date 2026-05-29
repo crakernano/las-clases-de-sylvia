@@ -193,8 +193,9 @@ span{
 .contact-btn{
     position: relative;
     overflow: hidden;
-    font-weight: 700;
-    line-height: 150%;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0%;
     vertical-align: middle;
     padding: 4px 4px 4px 24px;
     background-color: #FFF;
@@ -224,9 +225,10 @@ span{
     content: '🡥';
     position: relative;
     z-index: 2;
-    font-weight: 600;
     font-size: 16px;
+    font-weight: 600;
     line-height: 16px;
+    letter-spacing: 0%;
     border: #0066FF solid 1px;
     background-color: #0066FF;
     border-radius: 600px;
@@ -249,7 +251,14 @@ span{
 }
 
 .contact-btn:hover::before{transform: scaleX(1);}
-.contact-btn span{position: relative;z-index: 2; text-decoration: none;}
+.contact-btn span{
+  position: relative;
+  z-index: 2; 
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
 
 .contact-btn:hover::after{
     background-color: #FFF;
