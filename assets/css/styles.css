@@ -114,11 +114,12 @@ main{width: 100%;}
 }
 
 #hero-features-block h3{font-size: 25px !important;}
-#hero-features-block div{border-right: 1px solid #ccc; text-align: center;}
+#hero-features-block div{border-right: 1px solid #ccc; text-align: left; padding-left: 2rem;}
 #hero-features-block > div:last-child {border-right: none;}
 #hero-data-block > div:last-child {border-right: none;}
 #hero-data-block div{border-right: 1px solid #ccc;}
-
+#hero-title-block{margin-top: 5rem;}
+#hero-feature-center-box{padding-left: 3.5rem;}
 .photo-container{
   /* cuadro decorativo detrás de la foto */
   width: 460px;
@@ -246,7 +247,7 @@ span{
   color: #FFF;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 1rem;
-  margin-left: 1.5rem;
+  /*margin-left: 1.5rem;*/
 
 }
 
@@ -257,8 +258,10 @@ span{
 
 .service-img{
   border-radius: 20px;
-  width: -moz-available;
-  width: -webkit-fill-available;
+  width: 95%;
+  /* width: -moz-available; */
+  /* width: -webkit-fill-available; */
+
 }
 
 .pre-title{
@@ -337,6 +340,7 @@ li{
   padding: 10px;
   width: fit-content;
   margin-right: 50px;
+  padding-left: 20px;
 }
 
 .price-tag{
@@ -627,6 +631,65 @@ footer a{
 .contact-form-title{ display:block; font-weight:700; font-size:32px; line-height:40px; color:#050B20; margin-bottom:1rem; }
 .swiper-hidden{ display: none !important; }
 
+
+/* BANNER DE LAS COOKIES*/
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  z-index: 9999; /* Asegura que esté por encima de todo */
+  display: none; /* Se oculta por defecto hasta que JS decida mostrarlo */
+}
+
+.cookie-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.cookie-content a {
+  color: #4db8ff;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-aceptar {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-aceptar:hover { background-color: #45a049; }
+
+.btn-rechazar {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-rechazar:hover { background-color: #da190b; }
+
+/*FINAL DLE BANNER DE LAS COOKIES*/
+
 /* =======================
    Media queries - Inicio
    Añade y ajusta reglas para la versión mobile.
@@ -640,16 +703,24 @@ footer a{
   h3{padding-left: 10px;}
   .navbar-custom{padding-left: 10px;padding-right: 10px;}
   .site-navbar { padding-left: 12px !important; padding-right: 12px !important; }
-  p{padding-left: 2.1rem; padding-right: 10px;}
+  p{padding-left: 2.1rem; padding-right: 2.1rem;}
   .navbar-toggler{border: none;}
   .sp-150, .sp-100{display: none;}
   #hero-wrapper{margin-top: 0px; overflow: visible; /*margin-left: 10px;*/}
   #hero-wrapper .col-md-6:last-child{justify-content: center;}
-  .hero-title{font-size: 36px; padding-right: 0; margin-left: 20px; margin-top: 3rem;}
+  .hero-title{font-size: 42px; padding-right: 0; margin-left: 2.1rem; margin-top: 3rem;}
   .hero-lead{padding-right: 0;}
   .hero-lead p{margin-left: 10;}
-  #hero-features-block span{margin-left: 2.1rem}
+  #hero-features-block span{margin-left: 2.1rem}  
+  #hero-feature-center-box{padding-left:0px;}
   .contact-btn{font-size: 14px;}
+  .contact-btn::after {
+    content: '🡥';
+    font-family:
+        "Segoe UI Symbol",
+        "Noto Sans Symbols 2",
+        sans-serif;
+  }
   .sylvia-header-img{width: 300px; margin-top: 1rem; margin-left: -5px !important;}
   .photo-container{
     width: min(46vw, 320px);
@@ -672,10 +743,10 @@ footer a{
   .service-box h2{font-size: 42px;}
   .service-box-subtitle{margin-top: 2rem; display: block;}  
   .service-box-item{margin-top: 2rem;}
-  .clases-img-block{margin-top: 2rem; margin-left: 6px !important;}
+  .clases-img-block{margin-top: 2rem; margin-left: 6px !important; max-width: 95%;}
   #preparar-entrevistas, #revision-cv, #presentaciones-ingles-frances{display: none;}
   img, .sylvia-header-img, .clases-img-block, .custom-img-item {
-  max-width: 100%;
+  /*max-width: 100%;*/
   height: auto;
   margin-left: 10px;
   }
@@ -686,7 +757,10 @@ footer a{
     width: min(70vw, 320px); /* escala según pantalla */
     max-width: 76vw;
   }
+  #discovery-block{margin-top: 4rem;}
+  #discovery-block h2{padding-left: 2.1rem;}
   #discovery-section{overflow: visible;}
+  #discovery-box-wrapper{margin-top: 0px;}
   .discovery-box{min-height:fit-content; padding-top: 2rem;}
   .discovery-box span{font-size: 26px; margin-left: 10px;}
   .discovery-box p{
@@ -709,7 +783,7 @@ footer a{
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 2.1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-right: 10px;
   }
   .custom-img-item{ filter: none; margin-left: 20px !important; width: 90%;}
@@ -729,7 +803,7 @@ footer a{
   .clases-particulares h3{margin-left: 10px;}
   div#about-me{height:fit-content; overflow: hidden;}
   #about-me{padding-left: 2px; padding-right: 2px; overflow: visible; height: auto;}
-  #about-me h2{font-size: 32px; margin-top: 1rem; margin-left: 2.1rem; padding-left: 0px;}
+  #about-me h2{font-size: 32px; margin-top: 2rem; margin-left: 2.1rem; padding-left: 0px;}
   /* #about-me p{margin-left: 10px;} */
   .about-me-img{
     max-width: 90%;  
@@ -774,7 +848,7 @@ footer a{
     padding: 1rem;
   }
   .contact-btn{margin-left: 20px;}
-  #hero-features-block div{border: none; text-align: start; margin-left: 20px;}
+  #hero-features-block div{border: none; text-align: start; /*margin-left: 20px;*/ padding-left: 1rem;}
   .testimonials-section{margin-left: 0;}
   .form-check-label{font-size: 13px;}
   .contact-form {
@@ -821,6 +895,33 @@ footer a{
   font-size: 1.2rem;
   padding: 1rem 0;
 }
+
+.cookie-content {
+  flex-direction: column; /* Alinea el texto y los botones verticalmente */
+  text-align: center;      /* Centra los textos */
+  gap: 15px;               /* Añade separación interna entre los elementos */
+}
+
+.cookie-content p {
+  font-size: 14px;         /* Reduce ligeramente el tamaño del texto */
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cookie-buttons {
+  width: 100%;             /* Hace que el contenedor de botones ocupe todo el ancho */
+  flex-direction: column;  /* Apila los botones uno encima del otro */
+  gap: 8px;
+}
+
+.btn-aceptar, 
+.btn-rechazar {
+  width: 100%;             /* Los botones ocupan el 100% del ancho disponible */
+  padding: 12px 0;         /* Incrementa el área táctil del botón */
+  font-size: 15px;         /* Texto ligeramente más grande para mayor legibilidad */
+}
+
+
 }
 
 @media (max-width: 480px) {
