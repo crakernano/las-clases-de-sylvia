@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/select-content.js"></script>
+  <script src="assets/js/banner-cookie-manager.js"></script>
 
   </head>
   <body>
@@ -90,7 +91,7 @@
     <main class="container-fluid" id="first-impression-block">
       <div class="row mt-4rem" data-aos="fade-up" id="hero-wrapper">
 
-        <div class="col-12 col-md-6 pr-54">
+        <div class="col-12 col-md-6 pr-54" id="hero-title-block">
           <h1 class="hero-title">Domina un nuevo idioma y expande tus oportunidades</h1>
           <p class="hero-lead">
           Aprender otro idioma no es solo aprender palabras,
@@ -101,16 +102,16 @@
           <a class="btn btn-outline-primary contact-btn mt-2rem" href="#contact-form">Reserva tu primera clase</a>
 
           <div class="row mt-4rem" id="hero-features-block">
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-3">
             <h3 class="h3-spacing">Idiomas</h3>
             <span>Francés e Inglés</span>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-5" id="hero-feature-center-box">
             <h3 class="h3-spacing">Método único</h3>
             <span>Acompañamiento integral</span>
           </div>
           <div class="col-12 col-md-4">
-            <h3 class="h3-spacing">Télefono</h3>
+            <h3 class="h3-spacing">Teléfono</h3>
             <span>681 380 498</span>
           </div>                    
           </div>
@@ -126,11 +127,11 @@
     <main class="container" data-aos="fade-up" id="discovery-section">
         <div class="sp-150"></div>
 
-        <div class="container" data-aos="fade-up">
-          <h2 class="mt-5rem">Descubre otra forma de comunicarte</h2>
+        <div class="container" data-aos="fade-up" id="discovery-block">
+          <h2>Descubre otra forma de comunicarte</h2>
           <p class="service-box-subtext mt-2rem">Mejora tu fluidez y tu confianza en inglés y francés con un enfoque centrado en la comunicación real.</p>
 
-          <div class="row mt-4rem">
+          <div class="row mt-4rem" id="discovery-box-wrapper">
             <div class="col-12 col-md-3">
               <div class="discovery-box">
                 <img src="assets/images/aprendre_a_ pensar.svg" class="icon-section">
@@ -200,7 +201,7 @@
           <div class="sp-100"></div>
         <div class="container" data-aos="fade-up">
           <div class="row">
-            <div class="col-12 col-md-6" style="padding-right: 50px;">
+            <div class="col-12 col-md-6" style="padding-right: 45px;">
                 <h3 class="h3-spacing" style="font-size: 22px;">Clases de inglés online</h3>
               <p>El inglés forma parte de mi trayectoria profesional y académica.
               Acompaño a alumnos que quieren mejorar su fluidez y comunicarse con más claridad y
@@ -283,7 +284,7 @@
           <p class="service-box-subtext">Trabajo contigo la forma de estructurar tus ideas y adaptarlas al contexto profesional.</p>
           <div class="row custom-img-galery">
             <div class="col-12 col-md-4">
-              <img src="assets/images/preparacion_entrevista_trabajo.jpg" class="custom-img-item active" onclick="change2PrepararEntrevistas()"/> 
+              <img src="assets/images/preparacion_entrevista_trabajo.png" class="custom-img-item active" onclick="change2PrepararEntrevistas()"/> 
               <div class="description-img-mobile">
                 <span class="title-img-mobile"> Preparación de entrevistas de trabajo</span>
                 <p>En estas sesiones trabajamos la preparación de entrevistas en inglés o francés a partir de
@@ -295,7 +296,7 @@
               </div>
             </div>
             <div class="col-12 col-md-4">
-              <img src="assets/images/revision_curriculum_vitae.jpg" class="custom-img-item" onclick="change2RevisionCV()"/> 
+              <img src="assets/images/revision_curriculum_vitae.png" class="custom-img-item" onclick="change2RevisionCV()"/> 
               <div class="description-img-mobile">
                 <span class="title-img-mobile">Revisión de Curriculum Vitae</span>
                 <p>En estas sesiones trabajamos la revisión de tu currículum en inglés o francés para adaptarlo a contextos 
@@ -305,7 +306,7 @@
               </div>
             </div>
             <div class="col-12 col-md-4">
-              <img src="assets/images/presentaciones_ingles_frances.jpg" class="custom-img-item" onclick="change2Presentaciones()"/> 
+              <img src="assets/images/presentaciones_ingles_frances.png" class="custom-img-item" onclick="change2Presentaciones()"/> 
               <div class="description-img-mobile">
                 <span class="title-img-mobile">Presentaciones en inglés y francés</span>
                 <p>En estas sesiones trabajamos la preparación de presentaciones en inglés o francés en contextos profesionales. 
@@ -580,11 +581,26 @@
       </div>
       <div class="row">
         <div class="col-12" style="text-align: center; margin-top: 2rem;">
-          <p>TAMBIÉN PUEDES VER MI TRABAJO Y CONTENIDO EN <a href="#"><img src="assets/images/linkedin.svg" class="social-icon"></a> </p>
+          <p>TAMBIÉN PUEDES VER MI TRABAJO Y CONTENIDO EN <a href="https://www.linkedin.com/in/sylvia-duran-yates-b2517213b/?locale=es"><img src="assets/images/linkedin.svg" class="social-icon"></a> </p>
         </div>
       </div>
     </footer>
+<!--
+BANNER DE COOKIES    
+-->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios. Si continúa navegando, consideramos que acepta su uso. Puede obtener más información en nuestra 
+      <a href="/politica-de-cookies" target="_blank">Política de Cookies</a>.
+    </p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="btn-aceptar">Aceptar</button>
+      <button id="reject-cookies" class="btn-rechazar">Rechazar</button>
+    </div>
+  </div>
+</div>
 
+<!-- FINAL DEL BANNER-->
     <!-- Bootstrap Bundle (JS + Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
