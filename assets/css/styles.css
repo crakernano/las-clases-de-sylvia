@@ -716,10 +716,7 @@ footer a{
   #hero-features-block span{margin-left: 2.1rem}  
   #hero-feature-center-box{padding-left:0px;}
   .contact-btn{font-size: 14px;}
-  .contact-btn::after {
-    content: '🡥';
-    font-family: 'Noto Sans Symbols 2', sans-serif;
-  }
+  .contact-btn::after {content: '↗';}
   .sylvia-header-img{width: 300px; margin-top: 1rem; margin-left: -5px !important;}
   .photo-container{
     width: min(46vw, 320px);
