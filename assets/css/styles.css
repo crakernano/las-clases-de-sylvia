@@ -696,6 +696,7 @@ footer a{
    ======================= */
 
 @media (max-width: 768px) {
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap');
   html, body { overflow-x: hidden; }
   *, *::before, *::after { box-sizing: border-box; }
   .container, .form-contact, #hero-wrapper { max-width: 100%; overflow-x: hidden; padding-left: 0; padding-right: 0; }
@@ -709,6 +710,7 @@ footer a{
   #hero-wrapper{margin-top: 0px; overflow: visible; /*margin-left: 10px;*/}
   #hero-wrapper .col-md-6:last-child{justify-content: center;}
   .hero-title{font-size: 42px; padding-right: 0; margin-left: 2.1rem; margin-top: 3rem;}
+  #hero-title-block{margin-top: 0px;}
   .hero-lead{padding-right: 0;}
   .hero-lead p{margin-left: 10;}
   #hero-features-block span{margin-left: 2.1rem}  
@@ -716,10 +718,7 @@ footer a{
   .contact-btn{font-size: 14px;}
   .contact-btn::after {
     content: '🡥';
-    font-family:
-        "Segoe UI Symbol",
-        "Noto Sans Symbols 2",
-        sans-serif;
+    font-family: 'Noto Sans Symbols 2', sans-serif;
   }
   .sylvia-header-img{width: 300px; margin-top: 1rem; margin-left: -5px !important;}
   .photo-container{
