@@ -814,7 +814,7 @@ footer a{
   #hero-wrapper .col-md-6:last-child{justify-content: center;}
   .hero-title{font-size: 42px; padding-right: 0; margin-left: 2.1rem; margin-top: 3rem; margin-right: 2.1rem;}
   #hero-title-block{margin-top: 0px;}
-  .hero-lead{padding-right: 0;}
+  .hero-lead{padding-right: 1rem;}
   .hero-lead p{margin-left: 10;}
   #hero-features-block span{margin-left: 2.1rem}  
   #hero-feature-center-box{padding-left:0px;}
