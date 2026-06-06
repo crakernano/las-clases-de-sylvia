@@ -134,7 +134,7 @@ main{width: 100%;}
   border: 3px solid transparent;
   transform: translate(30px, -30px); /* ligero desplazamiento para quedar visible detrás */
 }
-
+#phone-title, #phone-number{margin-left: 3rem;}
 span{
   font-family: "DM Sans", sans-serif;
   font-weight: 400 ;
@@ -595,7 +595,8 @@ li{
   filter: grayscale(100%); /* por defecto en blanco y negro */
   transform: scale(1);
 }
-
+#last-custom-item{text-align: end;}
+#medium-custom-item{text-align: center;}
 /* Al hacer click se aplica la clase `active` y queda en color */
 .custom-img-item.active{
   filter: none;
@@ -726,7 +727,23 @@ footer a{
 
 .footer-row{ text-align: center; width: 50%; margin-left: 24.5%; margin-top: 2rem; margin-bottom: 2rem; }
 .footer-p{ padding-right: 24%; padding-left: 24%; /*margin-top: 2rem;*/ font-size: 14px; font-weight: 400; }
-
+footer a{text-decoration: none;}
+#footer-sylvia-name{
+  font-size: 19px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+#linkedin-footer-mobile{display: none;}
+#linkedin-footer{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  
+}
 .contact-form-title{ display:block; font-weight:700; font-size:32px; line-height:40px; color:#050B20; margin-bottom:1rem; }
 .swiper-hidden{ display: none !important; }
 
@@ -812,12 +829,13 @@ footer a{
   .sp-150, .sp-100{display: none;}
   #hero-wrapper{margin-top: 0px; overflow: visible; /*margin-left: 10px;*/}
   #hero-wrapper .col-md-6:last-child{justify-content: center;}
-  .hero-title{font-size: 42px; padding-right: 0; margin-left: 2.1rem; margin-top: 3rem; margin-right: 2.1rem;}
+  .hero-title{font-size: 42px; padding-right: 0; margin-left: 2.1rem; margin-top: 1rem; margin-right: 2.1rem;}
   #hero-title-block{margin-top: 0px;}
   .hero-lead{padding-right: 1rem;}
   .hero-lead p{margin-left: 10;}
   #hero-features-block span{margin-left: 2.1rem}  
   #hero-feature-center-box{padding-left:0px;}
+  #phone-title, #phone-number{margin-left: 2.1rem}
   .contact-btn{font-size: 14px;}
   .contact-btn::after {content: '↗';}
   .sylvia-header-img{width: 300px; margin-top: 1rem; margin-left: -5px !important;}
@@ -836,6 +854,7 @@ footer a{
   .service-box-subtext{padding: 0px; margin-right: 20px; margin-left: 20px}
   .container .service-box{padding-left:0px; padding-right:0px; text-align: center;}
   .container .service-box p{padding: 0px; font-size: 16px;line-height: 172%; text-align: start; margin-left: 40px; margin-right: 40px; margin-top: 1.5rem;}
+  .custom-img-galery-services{margin-top: 3rem;}
   .service-box span{margin-bottom: 1.5rem; margin-left: 2.1rem; font-size: 22px !important;}
   .service-box-subtitle{text-align: start;font-size: 23px; margin-left: 35px;}
   .service-box-subtitle span{font-size: 23px; margin-left: 35px;}
@@ -857,7 +876,7 @@ footer a{
     max-width: 76vw;
   }
   #discovery-block{margin-top: 4rem;}
-  #discovery-block h2{padding-left: 2.1rem;}
+  #discovery-block h2{font-size: 42px;}
   #discovery-section{overflow: visible;}
   #discovery-box-wrapper{margin-top: 0px;}
   .discovery-box{min-height:fit-content; padding-top: 2rem;}
@@ -932,7 +951,13 @@ footer a{
     border-bottom-right-radius: 40px;
     
   }
-  .photo-frame {transform: translate(6px, -373px) !important; height: 300px;min-height: 0px;}
+  .photo-frame {
+    transform: translate(6px, -373px) !important; 
+    height: 300px;
+    min-height: 0px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+  }
   .price-row{
     height: fit-content;
     margin-top: 1rem;
@@ -962,7 +987,13 @@ footer a{
     padding: 1rem;
   }
   .contact-btn{margin-left: 3.1rem; margin-top: 2rem;}
-  #hero-features-block div{border: none; text-align: start; /*margin-left: 20px;*/ padding-left: 1rem;}
+  #hero-features-block div{
+    border: none; 
+    text-align: start; 
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    /*margin-left: 20px;*/ 
+  }
   .testimonials-section{margin-left: 0;}
   .form-check-label{font-size: 13px;}
   .contact-form {
@@ -997,6 +1028,16 @@ footer a{
     box-sizing: border-box;
   }
   .footer-p{display: none;}
+  .footer-row{width: 100%; text-align: center; margin-right: auto;margin-left: auto;}
+  #footer-sylvia-name{
+    font-size: 19px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 100%;
+  }
+  footer a{text-decoration: none;}
+  #linkedin-footer{display: none;}
   /* .contact-form .btn {} */
 
   /*MENU*/
