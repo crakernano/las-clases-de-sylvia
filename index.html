@@ -119,7 +119,7 @@
           </div>
           <div class="col-12 col-md-4">
             <h3 class="h3-spacing" id="phone-title">Teléfono</h3>
-            <span id="phone-number">681 380 498</span>
+            <span id="phone-number"><a href="tel:+34681380498" style="text-decoration: none; color: #000;">681 380 498</a></span>
           </div>                    
           </div>
         </div>
@@ -157,14 +157,14 @@
               <div class="discovery-box">
                 <img src="assets/images/Sumergete.svg" class="icon-section">
                 <span>Comprende cómo funciona el idioma</span>
-                <p>Cada lengua refleja una forma distinta de pensar y de comunicarse.</p>              
+                <p class="pr-50">Cada lengua refleja una forma distinta de pensar y de comunicarse.</p>              
               </div>
             </div>
             <div class="col-12 col-md-3">
               <div class="discovery-box">
                 <img src="assets/images/clases_personalizadas.svg" class="icon-section">
                 <span>Clases personalizadas y estructuradas</span>
-                <p>Cada sesión se adapta a tu nivel, objetivos y ritmo de aprendizaje.</p>
+                <p class="pr-50">Cada sesión se adapta a tu nivel, objetivos y ritmo de aprendizaje.</p>
               </div>
             </div>
           </div>
@@ -516,6 +516,54 @@
                       </div>
                     </div>
                   </article> 
+
+                  <!-- Article -->
+                  <article class="card-article swiper-slide">
+                    <div class="card-body">
+                        <p>“Estamos encantados con las clases online de Sylvia. Llevamos dos años con mi hijo y sin duda ha mejorado su confianza para lanzarse a hablar en inglés. 
+                           Como profesora es muy ordenada y está siempre a disposición de las necesidades del alumno.</p>
+                      <div class="card-shadow"></div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-3">
+                            <img
+                              src="assets/images/testimonios/manolito.jpg"
+                              alt="User 1"
+                              class="card-avatar"
+                            />
+                          </div>
+                          <div class="col-9">
+                            <span class="card-name">María Camilo Tiscordio</span>
+                            <span class="card-role">Hace un mes</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article> 
+
+                  <!-- Article -->
+                  <article class="card-article swiper-slide">
+                    <div class="card-body">
+                        <p>“Estamos encantados con las clases online de Sylvia. Llevamos dos años con mi hijo y sin duda ha mejorado su confianza para lanzarse a hablar en inglés. 
+                           Como profesora es muy ordenada y está siempre a disposición de las necesidades del alumno.</p>
+                      <div class="card-shadow"></div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-3">
+                            <img
+                              src="assets/images/testimonios/manolito.jpg"
+                              alt="User 1"
+                              class="card-avatar"
+                            />
+                          </div>
+                          <div class="col-9">
+                            <span class="card-name">María Camilo Tiscordio</span>
+                            <span class="card-role">Hace un mes</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article> 
                 </div>
               </div>
 
@@ -535,32 +583,32 @@
         </main>
         <div class="sp-150"></div>
         <div class="form-contact" id="contact-form" data-aos="fade-up">
-          <form class="contact-form">
+          <form class="contact-form" action="https://formspree.io/f/xkoaznbo" method="POST">
             <span class="contact-form-title">Contáctame o reserva tu primera clase</span>
             
             <div class="field-group">
               <label class="inside-label" for="firstName">Nombre</label>
-              <input id="firstName" type="text" class="form-control" placeholder="First name" aria-label="First name">
+              <input id="firstName" name="name" type="text" class="form-control" placeholder="First name" aria-label="First name">
             </div>
 
             <div class="field-group">
               <label class="inside-label" for="lastName">Apellido</label>
-              <input id="lastName" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+              <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
             </div>
 
             <div class="field-group">
               <label class="inside-label" for="email">Email</label>
-              <input id="email" type="email" class="form-control" aria-label="Email" placeholder="sarah_shaefle@gmail.com" />
+              <input id="email" type="email" name="email" class="form-control" aria-label="Email" placeholder="sarah_shaefle@gmail.com" />
             </div>
 
             <div class="field-group">
               <label class="inside-label" for="phone">Teléfono</label>
-              <input id="phone" type="tel" class="form-control" aria-label="Teléfono" placeholder="666666666" />
+              <input id="phone" type="tel" name="telephone" class="form-control" aria-label="Teléfono" placeholder="666666666" />
             </div>
 
             <div class="field-group">
               <label class="inside-label" for="message">Descripción</label>
-              <textarea id="message" placeholder="Mensaje" class="form-control" rows="4"></textarea>
+              <textarea id="message" name="message" placeholder="Mensaje" class="form-control" rows="4"></textarea>
             </div>
 
             <div class="field-group form-privacy mt-075">
@@ -584,7 +632,7 @@
         <div class="col-12 text-center"><img src="assets/images/lcds_logo.png"></div>
       </div>
       <div class="row footer-row">
-        <div class="col-12 col-md-3" id="footer-sylvia-name">Sylvia Duran Yates</div>
+        <div class="col-12 col-md-3" id="footer-sylvia-name">Sylvia Durán Yates</div>
         <div class="col-12 col-md-3">Clases online de idiomas</div>
         <div class="col-12 col-md-3"><a href="cookies.html">Politica de cookies</a></div>
         <div class="col-12 col-md-3"><a href="privacy.html">Politica de privacidad</a></div>
