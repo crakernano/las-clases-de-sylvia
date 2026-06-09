@@ -1,10 +1,24 @@
+// Adjust slidesPerView so it never exceeds the actual number of slides
+const _cardSlides = Math.max(1, document.querySelectorAll('.card-content .swiper-slide').length);
+const _spDefault = Math.min(2, _cardSlides);
+const _sp600 = Math.min(2, _cardSlides);
+const _sp968 = Math.min(6, _cardSlides);
+
+// Swiper configuration
+const _speed = 1500;
+const _requestedAutoplayDelay = 10; // user's preferred tiny delay
+const _autoplayDelay = _requestedAutoplayDelay < _speed ? _speed + 50 : _requestedAutoplayDelay;
+
 let swiperCard = new Swiper(".card-content", {
-  loop: true,
+  slidesPerView: _spDefault,
   spaceBetween: 30,
+  loop: true,
+  loopFillGroupWithBlank: false,
+  loopedSlides: _cardSlides,
   grabCursor: true,
-  speed: 1500,
+  speed: _speed,
   autoplay:{
-    delay: 10,
+    delay: _autoplayDelay,
     disableOnInteraction: false,
   },
 
@@ -20,8 +34,8 @@ let swiperCard = new Swiper(".card-content", {
   },
 
   breakpoints: {
-    600: { slidesPerView: 2 },
-    968: { slidesPerView: 4 },
+    600: { slidesPerView: _sp600 },
+    968: { slidesPerView: _sp968 },
   },
 });
 
