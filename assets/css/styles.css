@@ -103,6 +103,22 @@ main{width: 100%;}
   color: inherit;
   font-weight: 500;
 }
+/* -------------------------- Marcar el item activo en el menú --------------------------------------*/
+
+.navbar-custom .nav-link.active{
+  font-weight: 700;
+}
+
+.navbar-custom .nav-link{
+  transition: color 0.18s ease, font-weight 0.18s ease, transform 0.12s ease;
+  will-change: font-weight, transform;
+}
+
+.navbar-custom .nav-link.active{
+  transform: scale(1.02);
+}
+
+/*---------- */
 
 .navbar-custom .nav-right{
   display: flex;
@@ -142,7 +158,7 @@ span{
   line-height: 100% ;
   letter-spacing: 0% ;
 }
-
+.section-title{margin-bottom: 3rem;}
 /*content: '🡥';*/
 
 /* .contact-btn::before {
@@ -292,7 +308,8 @@ span{
   color: #252432;
   display: block;
   margin-top: 1rem;
-  max-height: 280px;  
+  max-height: 280px;
+  padding-bottom: 1rem;  
 }
 
 .service-box-subtext{
@@ -808,6 +825,11 @@ footer a{text-decoration: none;}
 .btn-rechazar:hover { background-color: #da190b; }
 
 /*FINAL DLE BANNER DE LAS COOKIES*/
+#cookie-page h2{padding-bottom: 3rem;}
+#cookie-page h3{
+  font-size: 23px;
+  margin-bottom: 1.5;
+}
 
 /* =======================
    Media queries - Inicio
@@ -898,7 +920,7 @@ footer a{text-decoration: none;}
     margin-left: 10px;
     width: 90%;
     margin-left: 20px;
-    border-radius: 20px;
+    border-radius: 30px;
   }
   .description-img-mobile{display: block; margin-bottom: 1rem; margin-left: 0px; /*margin-right: 20px;*/}
   .description-img-mobile p{text-align: left;}
@@ -988,6 +1010,7 @@ footer a{text-decoration: none;}
     display: flex;
     justify-content: center;
     padding: 1rem;
+    margin-top: 1rem;
   }
   .contact-btn{margin-left: 3.1rem; margin-top: 2rem;}
   #hero-features-block div{
@@ -1076,11 +1099,12 @@ footer a{text-decoration: none;}
 
 .btn-aceptar, 
 .btn-rechazar {
-  width: 100%;             /* Los botones ocupan el 100% del ancho disponible */
+  width: 85%;             /* Los botones ocupan el 100% del ancho disponible */
+  margin-left: 9%;
   padding: 12px 0;         /* Incrementa el área táctil del botón */
   font-size: 15px;         /* Texto ligeramente más grande para mayor legibilidad */
 }
-
+#cookie-page h2,h3,h4{padding-left: 2.1rem;}
 
 }
 
