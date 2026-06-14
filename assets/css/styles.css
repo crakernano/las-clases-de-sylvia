@@ -107,6 +107,7 @@ main{width: 100%;}
 
 .navbar-custom .nav-link.active{
   font-weight: 700;
+  color: #0066FF;
 }
 
 .navbar-custom .nav-link{
@@ -296,7 +297,9 @@ span{
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-  min-height: 280px;
+  /*min-height: 280px;*/
+  min-height: 300px;
+
 }
 
 .discovery-box span{
@@ -749,7 +752,7 @@ footer a{text-decoration: none;}
   font-size: 19px;
   margin-bottom: 1rem;
   font-weight: 700;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   line-height: 100%;
 }
 #linkedin-footer-mobile{display: none;}
@@ -825,7 +828,7 @@ footer a{text-decoration: none;}
 .btn-rechazar:hover { background-color: #da190b; }
 
 /*FINAL DLE BANNER DE LAS COOKIES*/
-#cookie-page h2{padding-bottom: 3rem;}
+#cookie-page h2{padding-bottom: 3rem; text-align: start;}
 #cookie-page h3{
   font-size: 23px;
   margin-bottom: 1.5;
@@ -926,7 +929,8 @@ footer a{text-decoration: none;}
   .description-img-mobile p{text-align: left;}
   .certificate-important{margin-left: 2.1rem;}
   .title-img-mobile{
-    text-align: center;
+    /* text-align: center; */
+    text-align: start;
     font-weight: 700;
     font-style: bold;
     font-size: 20px;
@@ -1010,7 +1014,7 @@ footer a{text-decoration: none;}
     display: flex;
     justify-content: center;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .contact-btn{margin-left: 3.1rem; margin-top: 2rem;}
   #hero-features-block div{
@@ -1058,8 +1062,9 @@ footer a{text-decoration: none;}
   #footer-sylvia-name{
     font-size: 19px;
     margin-bottom: 1rem;
+    margin-top: 1rem;
     font-weight: 700;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     line-height: 100%;
   }
   footer a{text-decoration: none;}
@@ -1104,7 +1109,7 @@ footer a{text-decoration: none;}
   padding: 12px 0;         /* Incrementa el área táctil del botón */
   font-size: 15px;         /* Texto ligeramente más grande para mayor legibilidad */
 }
-#cookie-page h2,h3,h4{padding-left: 2.1rem;}
+#cookie-page h2,h3,h4{padding-left: 2.1rem; text-align: start;}
 
 }
 
