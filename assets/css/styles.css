@@ -1067,7 +1067,16 @@ footer a{text-decoration: none;}
     /*text-transform: uppercase;*/
     line-height: 100%;
   }
-  footer a{text-decoration: none;}
+  footer a{
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 1rem;
+  }
+  .footer-item{margin-bottom: 1rem;}
   #linkedin-footer{display: none;}
   #linkedin-footer-mobile{display: block;}
   /* .contact-form .btn {} */
