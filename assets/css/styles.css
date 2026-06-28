@@ -293,9 +293,11 @@ span{
   margin-top: 3.5rem;
   margin-right: 20px;
   margin-left: 20px;
-  padding-top: 20px;
+  /* padding-top: 20px; */
+  padding-top: 40px;
   padding-left: 20px;
-  padding-right: 20px;
+  /* padding-right: 20px; */
+  padding-right: 30px;
   padding-bottom: 20px;
   /*min-height: 280px;*/
   min-height: 300px;
@@ -747,7 +749,7 @@ footer a{
 
 .footer-row{ text-align: center; width: 50%; margin-left: 24.5%; margin-top: 2rem; margin-bottom: 2rem; }
 .footer-p{ padding-right: 24%; padding-left: 24%; /*margin-top: 2rem;*/ font-size: 14px; font-weight: 400; }
-footer a{text-decoration: none;}
+/*footer a{text-decoration: none;}*/
 #footer-sylvia-name{
   font-size: 19px;
   margin-bottom: 1rem;
@@ -832,6 +834,44 @@ footer a{text-decoration: none;}
 #cookie-page h3{
   font-size: 23px;
   margin-bottom: 1.5;
+}
+
+/* ======================= Email enviado con exito  ======================= */
+
+.successful-box{
+  width: 50%;
+  min-height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 10%;
+}
+.thanks-text{
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -2%;
+  line-height: 112.00000000000001%;
+  margin-top: 3rem;
+  color: #1A213E;
+}
+.thanks-subtext{
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: -2%;
+  line-height: 112.00000000000001%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
+.return-link{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #0066FF;
+  text-decoration: none;
 }
 
 /* =======================
@@ -945,6 +985,8 @@ footer a{text-decoration: none;}
     margin-right: 2.1rem;
   }
   .custom-img-item{ filter: none; margin-left: 20px !important; width: 90%;}
+  #last-custom-item{margin-top: 2rem;}
+  #medium-custom-item{margin-top: 2rem;}
   #clases-online{margin-left: -13px; min-width: 100vw; overflow-x: hidden;}
   #clases-frances ul{
     margin-right: 2.1rem;
@@ -1016,7 +1058,7 @@ footer a{text-decoration: none;}
     padding: 1rem;
     margin-top: 2rem;
   }
-  .contact-btn{margin-left: 3.1rem; margin-top: 2rem;}
+  .contact-btn{/*margin-left: 3.1rem;*/ margin-top: 2rem;}
   #hero-features-block div{
     border: none; 
     text-align: start; 
@@ -1031,8 +1073,10 @@ footer a{text-decoration: none;}
     width: 100%;
     max-width: 520px;
     margin: 0 auto;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    /* padding-right: 20px;
+    padding-left: 20px; */
   }
 
   .contact-form .row {
@@ -1068,7 +1112,7 @@ footer a{text-decoration: none;}
     line-height: 100%;
   }
   footer a{
-    text-decoration: none;
+    /* text-decoration: none; */
     font-family: Roboto;
     font-weight: 400;
     font-size: 14px;
@@ -1119,6 +1163,18 @@ footer a{text-decoration: none;}
   font-size: 15px;         /* Texto ligeramente más grande para mayor legibilidad */
 }
 #cookie-page h2,h3,h4{padding-left: 2.1rem; text-align: start;}
+
+/* ======================= Email enviado con exito  ======================= */
+
+.successful-box{
+  width: 90%;
+  min-height: 450px;  
+  text-align: center;
+  margin-top: 3rem;
+}
+.thanks-text{font-size: 30px;}
+.thanks-subtext{font-size: 20px;}
+.return-link{margin-left: 2rem;}
 
 }
 
