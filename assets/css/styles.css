@@ -295,11 +295,13 @@ span{
   margin-left: 20px;
   /* padding-top: 20px; */
   padding-top: 40px;
-  padding-left: 20px;
+  /*padding-left: 20px;*/
+  padding-left: 30px;
   /* padding-right: 20px; */
   padding-right: 30px;
   padding-bottom: 20px;
   /*min-height: 280px;*/
+  height: 300px;
   min-height: 300px;
 
 }
@@ -746,7 +748,11 @@ footer a{
 }
 
 .price-row{ margin-left: 25%; margin-top: -150px; height: 100px; margin-bottom: 5rem;}
-
+footer a{
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+}
+footer a:hover{text-decoration: underline;}
 .footer-row{ text-align: center; width: 50%; margin-left: 24.5%; margin-top: 2rem; margin-bottom: 2rem; }
 .footer-p{ padding-right: 24%; padding-left: 24%; /*margin-top: 2rem;*/ font-size: 14px; font-weight: 400; }
 /*footer a{text-decoration: none;}*/
@@ -856,13 +862,13 @@ footer a{
 }
 .thanks-subtext{
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: -2%;
   line-height: 112.00000000000001%;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .return-link{
@@ -981,7 +987,7 @@ footer a{
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 2.1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-right: 2.1rem;
   }
   .custom-img-item{ filter: none; margin-left: 20px !important; width: 90%;}
@@ -1007,7 +1013,7 @@ footer a{
   .clases-particulares h3{margin-left: 10px;}
   div#about-me{height:fit-content; overflow: hidden;}
   #about-me{padding-left: 2px; padding-right: 2px; overflow: visible; height: auto;}
-  #about-me h2{font-size: 32px; margin-top: 2rem; margin-left: 2.1rem; padding-left: 0px;}
+  #about-me h2{font-size: 32px; margin-top: 1rem; margin-left: 2.1rem; padding-left: 0px;}
   /* #about-me p{margin-left: 10px;} */
   .about-me-img{
     max-width: 90%;  
@@ -1058,7 +1064,8 @@ footer a{
     padding: 1rem;
     margin-top: 2rem;
   }
-  .contact-btn{/*margin-left: 3.1rem;*/ margin-top: 2rem;}
+  .contact-btn{margin-left: 3.1rem; margin-top: 2rem;}
+  #form-submit-btn{margin-left: 0px;}
   #hero-features-block div{
     border: none; 
     text-align: start; 
@@ -1112,14 +1119,16 @@ footer a{
     line-height: 100%;
   }
   footer a{
-    /* text-decoration: none; */
+    text-decoration: none;
     font-family: Roboto;
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;
     margin-bottom: 1rem;
+    font-family: "DM Sans", sans-serif;
   }
+  footer a:hover{text-decoration: underline;}
   .footer-item{margin-bottom: 1rem;}
   #linkedin-footer{display: none;}
   #linkedin-footer-mobile{display: block;}
