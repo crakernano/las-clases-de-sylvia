@@ -41,7 +41,7 @@
   <body>
     
     <header class="mb-4">
-      <nav class="navbar navbar-expand-lg navbar-light navbar-custom site-navbar">
+      <nav class="navbar navbar-expand-xl navbar-light navbar-custom site-navbar">
         <!-- Brand / Logo (siempre visible) -->
           <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img src="assets/images/logo.svg" alt="Logo" class="nav-logo">
@@ -148,7 +148,7 @@
 
           <div class="row mt-4rem" id="discovery-box-wrapper">
             <div class="col-12 col-md-3">
-              <div class="discovery-box">
+              <div class="discovery-box" id="first-discovery-box">
                 <img src="assets/images/aprendre_a_pensar.svg" class="icon-section" alt="Icono aprende a pensar" loading="lazy">
                 <span>Aprende a pensar en otro idioma</span>
                 <p class="pr-50">No se trata solo de memorizar palabras, sino de estructurar ideas y expresarte con claridad.</p>
@@ -169,7 +169,7 @@
               </div>
             </div>
             <div class="col-12 col-md-3">
-              <div class="discovery-box">
+              <div class="discovery-box" id="last-discovery-box">
                 <img src="assets/images/clases_personalizadas.svg" class="icon-section" alt="Icono clases personalizadas" loading="lazy">
                 <span>Clases personalizadas y estructuradas</span>
                 <p class="pr-50">Cada sesión se adapta a tu nivel, objetivos y ritmo de aprendizaje.</p>
@@ -218,7 +218,7 @@
           <div class="sp-100"></div>
         <div class="container">
           <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 clases-particulares-box">
                 <h3 class="h3-spacing">Clases de inglés online</h3>
               <p>El inglés forma parte de mi trayectoria profesional y académica.
               Acompaño a alumnos que quieren mejorar su fluidez y comunicarse con más claridad y
@@ -244,7 +244,7 @@
             <div class="col-12 col-md-6 order-2 order-md-1">
               <img src="assets/images/clases_ingles.png" class="clases-img-block" alt="Clases de inglés" loading="lazy">              
             </div>
-            <div class="col-12 col-md-6 order-1 order-md-2">
+            <div class="col-12 col-md-6 order-1 order-md-2 clases-particulares-box">
               <h3 class="h3-spacing">Clases de francés online</h3>
               <p class="pr-30">
               Viví y estudié en París hasta finalizar mis estudios universitarios en la Universidad de la
@@ -271,7 +271,7 @@
         <div class="sp-150"></div>
         <div class="container" id="clases-frances">
           <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 clases-particulares-box">
               <h3 class="h3-spacing">Francés para vivir o trabajar en Francia</h3>
               <p>Muchos de mis alumnos están preparando su traslado a Francia por motivos profesionales o
                 personales. El trabajo se centra en desarrollar una comunicación clara y natural en francés en
@@ -304,7 +304,7 @@
           <p class="service-box-subtext">Trabajo contigo la forma de estructurar tus ideas y adaptarlas al contexto profesional.</p>
           <div class="row custom-img-galery">
             <div class="col-12 col-md-4">
-              <img src="assets/images/preparacion_entrevista_trabajo.png" class="custom-img-item active" onclick="change2PrepararEntrevistas()" alt="Preparación de entrevistas" loading="lazy"/> 
+              <img src="assets/images/preparacion_entrevista_trabajo.png" class="custom-img-item active" onclick="change2PrepararEntrevistas()" alt="Preparación de entrevistas" id="first-custom-img-item" loading="lazy"/> 
               <img src="assets/images/preparacion_entrevista_trabajo_mobile.png" class="custom-img-mobile-item" alt="Preparación de entrevistas (móvil)" loading="lazy"/> 
               <div class="description-img-mobile">
                 <span class="title-img-mobile"> Preparación de entrevistas de trabajo</span>
@@ -317,7 +317,7 @@
               </div>
             </div>
             <div class="col-12 col-md-4" id="medium-custom-item">
-              <img src="assets/images/revision_curriculum_vitae.png" class="custom-img-item" onclick="change2RevisionCV()" alt="Revisión de currículum" loading="lazy"/> 
+              <img src="assets/images/revision_curriculum_vitae.png" class="custom-img-item" onclick="change2RevisionCV()" alt="Revisión de currículum" id="medium-custom-img-item" loading="lazy"/> 
               <img src="assets/images/revision_curriculum_vitae_mobile.png" class="custom-img-mobile-item" alt="Revisión de currículum (móvil)" loading="lazy"/> 
               <div class="description-img-mobile">
                 <span class="title-img-mobile">Revisión de Curriculum Vitae</span>
@@ -328,7 +328,7 @@
               </div>
             </div>
             <div class="col-12 col-md-4" id="last-custom-item">
-              <img src="assets/images/presentaciones_ingles_frances.png" class="custom-img-item" onclick="change2Presentaciones()" alt="Presentaciones en inglés y francés" loading="lazy"/>
+              <img src="assets/images/presentaciones_ingles_frances.png" class="custom-img-item" onclick="change2Presentaciones()" alt="Presentaciones en inglés y francés" id="last-custom-img-item" loading="lazy"/>
               <img src="assets/images/presentaciones_ingles_frances_mobile.png" class="custom-img-mobile-item" onclick="change2Presentaciones()" alt="Presentaciones en inglés y francés (móvil)" loading="lazy"/>
               <div class="description-img-mobile">
                 <span class="title-img-mobile">Presentaciones en inglés y francés</span>
@@ -383,11 +383,11 @@
 
         <div class="container" id="about-me">
           <div class="row">
-            <div class="col-12 col-md-6 order-1 order-md-1" style="height: 360px;">
+            <div class="col-12 col-md-6 order-1 order-md-1" id="photo-about-me-box">
               <img src="assets/images/sylvia.png" class="about-me-img" alt="Sylvia Durán" loading="lazy" />
               <div class="photo-frame"></div>
             </div>
-            <div class="col-12 col-md-6 order-2 order-md-2">
+            <div class="col-12 col-md-6 order-2 order-md-2" id="about-me-text">
               <h2 style="font-size: 32px; text-align: start;">Un poquito más sobre mi</h2>
               <p style="margin-top: 2rem;">Trabajo desde hace <strong>más de 25 años en el ámbito de los idiomas</strong> y la comunicación
                 profesional.</p>
@@ -423,18 +423,20 @@
             </div>
         </div>  
         <div class="row" style="margin-top: 2rem;">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 order-2">
             <p class="additional-services-title">SERVICIOS ADICIONALES</p>
+            <ul>
             <li class="additional-services-item">Revisión del currículum (inglés o francés) <strong>65 €</strong></li>
             <li class="additional-services-item">Preparación de entrevista de trabajo  <strong>75 €</strong></li>
             <li class="additional-services-item">Preparación de presentaciones <strong>85 €</strong></li> 
+            </ul>
           </div>
-          <div class="col-12 col-md-6" id="conditions-block">
-            <p>
+          <div class="col-12 col-md-6 order-1" id="conditions-block">
+            <ul>
               <li class="additional-services-item">Clases online de <strong>lunes a viernes</strong> </li>
               <li class="additional-services-item">Duración de cada sesión: <strong>1 hora</strong></li>
               <li class="additional-services-item">Si no sabes qué opción elegir, podemos comentarlo en una primera sesión.</li>
-            </p>
+            </ul>
           </div>
         </div>
       </div>
@@ -505,7 +507,7 @@
                   <!-- Article -->
                   <article class="card-article swiper-slide">
                     <div class="card-body">
-                        <p>“Estamos encantados con las clases online de Sylvia. Llevamos dos años con mi hijo y sin duda ha mejorado su confianza para lanzarse a hablar en inglés. 
+                        <p>Estamos encantados con las clases online de Sylvia. Llevamos dos años con mi hijo y sin duda ha mejorado su confianza para lanzarse a hablar en inglés. 
                            Como profesora es muy ordenada y está siempre a disposición de las necesidades del alumno.</p>
                       <div class="card-shadow"></div>
                       <div class="card-footer">
@@ -529,7 +531,7 @@
                   <!-- Article -->
                   <article class="card-article swiper-slide">
                     <div class="card-body">
-                        <p>“Estamos encantados con las clases online de Sylvia. Llevamos dos años con mi hijo y sin duda ha mejorado su confianza para lanzarse a hablar en inglés. 
+                        <p>Estamos encantados con las clases online de Sylvia. Llevamos dos años con mi hijo y sin duda ha mejorado su confianza para lanzarse a hablar en inglés. 
                            Como profesora es muy ordenada y está siempre a disposición de las necesidades del alumno.</p>
                       <div class="card-shadow"></div>
                       <div class="card-footer">
@@ -553,7 +555,7 @@
                   <!-- Article -->
                   <article class="card-article swiper-slide">
                     <div class="card-body">
-                        <p>“Estamos encantados con las clases online de Sylvia. Llevamos dos años con mi hijo y sin duda ha mejorado su confianza para lanzarse a hablar en inglés. 
+                        <p>Estamos encantados con las clases online de Sylvia. Llevamos dos años con mi hijo y sin duda ha mejorado su confianza para lanzarse a hablar en inglés. 
                            Como profesora es muy ordenada y está siempre a disposición de las necesidades del alumno.</p>
                       <div class="card-shadow"></div>
                       <div class="card-footer">
