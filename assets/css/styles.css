@@ -1214,7 +1214,7 @@ footer a:hover{text-decoration: underline;}
     padding-left: 70px;
   }
   .hero-title{
-    font-size: 40px;
+    font-size: 35px;
     /* margin-left: 4.1rem; */
   }
   #hero-title-block{
@@ -1222,9 +1222,7 @@ footer a:hover{text-decoration: underline;}
     margin-top: 0px;
   }
   #hero-wrapper > .col-12, #hero-wrapper > .col-md-6 {padding-left: 4.1rem;}
-  .hero-lead{
-    padding-right: 0px;
-  }
+  .hero-lead{padding-right: 0px;}
   .sylvia-header-img{
     width: 294px;
     margin-right: 46px;
@@ -1277,7 +1275,7 @@ footer a:hover{text-decoration: underline;}
   #first-custom-img-item{margin-left: 2.1rem;}
   #medium-custom-img-item{margin-left: 20px;}
   #last-custom-img-item{margin-right: 2.1rem;}
-  #revision-cv, #presentaciones-ingles-frances, #preparar-entrevistas{margin-left: 2rem;}
+  #revision-cv, #presentaciones-ingles-frances, #preparar-entrevistas{margin-left: 2rem; margin-right: 2rem; min-height: 270px;}
   #photo-about-me-box{
     width: 100%;
     text-align: center;
@@ -1306,9 +1304,7 @@ footer a:hover{text-decoration: underline;}
   #about-me h2{font-size: 32px; margin-top: 2rem;}
   .sp-150{display: none;}
 
-  #conditions-block{
-    width: 100%;
-  }
+  #conditions-block{width: 100%;}
   .additional-services-title{margin-left: 2.1rem;}
   .contact-form{left: 15%;}
   .footer-row{
@@ -1326,11 +1322,107 @@ footer a:hover{text-decoration: underline;}
 
 /* iPad Pro y pantallas medianas */
 @media (min-width: 1025px) and (max-width: 1366px) {
-  .site-navbar{
-    padding-right: 80px;
-    padding-left: 80px;
+  .sp-100, .sp-150{display: none;}
+  
+  .order-ipad-1 { order: 1 !important; }
+  .order-ipad-2 { order: 2 !important; }
+  .order-ipad-3 { order: 3 !important; }
+
+  .site-navbar{padding-right: 80px;padding-left: 80px;}
+  .hero-title{font-size: 35px;}
+  #hero-title-block{margin-top: 0px;}
+  #hero-wrapper > .col-12, #hero-wrapper > .col-md-6 {padding-left: 4.1rem;}
+  .hero-lead{padding-right: 0px;}
+  .sylvia-header-img{width: 294px;margin-right: 46px;}
+  .photo-container{
+    width: 260px;
+    margin-right: 40px;
+    min-height: 460px;
+    height: 460px;
+  }
+  #hero-features-block h3{font-size: 18px;}
+  #hero-feature-center-box{padding-left: 10px;}
+  #phone-title, #phone-number{margin-left: 0px;}
+  #hero-features-block span{font-size: 0.65rem;}
+  #discovery-block h2{font-size: 40px;}
+  .service-box-subtext{padding:20px 45px;}  
+  p.service-box-subtext{font-size: 20px;}
+  #discovery-box-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 0.5rem;
+    width: 95%;   
+  }
+  .discovery-box{
+    padding-right: 15px;
+    padding-left: 20px;
+    min-height: 320px;
+    width: 100%;
+    max-width: 100%;
+  }
+  #discovery-box-wrapper.row.mt-4rem div.col-12.col-md-3{width: auto;}
+  .discovery-box p{font-size: 15px}
+  .discovery-box p.pr-50{padding-right: 1px;}
+  .discovery-box span{font-size: 16px;}
+
+  .service-box{width: 95%;}
+  .service-box-subtext{padding:20px 45px}
+  .service-box span{font-size: 16px;}
+  .service-box p{font-size: 13px;}
+
+  .clases-particulares-box{
+    margin-left: 2.1rem; 
+    width: 90%; 
+    margin-right: 2.1rem; 
+    text-align: center;
   }
 
+  .clases-particulares h2{font-size: 40px;}
+  .clases-img-block{width: 100%; margin-top: 4rem;}
+
+  #clases-frances-img{width: 750px; margin-top: 3rem;}
+  #clases-migrar-img{width: 100%; margin-top: 3rem; margin-left: 0px;}
+  #clases-ingles-img{width: 750px; margin-top: 3rem;}
+
+  .clases-img-box{width: 100%;}
+
+  #mentoria{padding-top: 0px;}
+  #mentoria h2{font-size: 40px;}
+  .custom-img-item{width: 90%;}
+  #first-custom-img-item{margin-left: 2.1rem;}
+  #medium-custom-img-item{margin-left: 20px;}
+  #last-custom-img-item{margin-right: 2.1rem;}
+  #revision-cv, #presentaciones-ingles-frances, #preparar-entrevistas{margin-left: 2rem; margin-right: 2rem; min-height: 270px;}
+
+  #photo-about-me-box{width: 100%;text-align: center;display: block;}
+
+  .price-row{margin-left: 2.1rem;margin-top: 0px;margin-right: 50px;}
+  .class-type-tag{width: 145px;}
+  .about-me-img{max-width: 100%; height: auto;}
+  div#about-me{height: fit-content;}
+  #about-me-text{
+    width: 90%;
+    margin-left: 2.1rem;
+    margin-top: 4rem;
+  }
+  .photo-frame{
+    transform: translate(0px, 0px);
+    z-index: 0;
+    display: none;
+  }
+  #about-me h2{font-size: 32px; margin-top: 2rem;}
+  #conditions-block{width: 100%;}
+  .additional-services-title{margin-left: 2.1rem;}
+
+  .contact-form{left: 25%;}
+  .footer-row{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 14px;
+  }
+  #footer-sylvia-name{font-size: 18px;}
+  .footer-p{padding-right: 8%;padding-left: 8%;}
 }
 
 /*style="height: 360px;" id="photo-about-me-box"*/
