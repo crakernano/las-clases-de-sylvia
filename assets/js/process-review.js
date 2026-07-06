@@ -13,8 +13,26 @@
 
 async function cargarYRenderizarReseñas() {
   try {
-    const respuesta = await fetch('../assets/data/review.json'); // Asegúrate de que la ruta es correcta
-    const datos = await respuesta.json();
+    const respuesta = await fetch('assets/data/review.json'); // ruta relativa segura desde index.html
+    const contentType = respuesta.headers.get('content-type') || '';
+    const text = await respuesta.text();
+
+    if (!respuesta.ok) {
+      console.error('Error de red al obtener el JSON:', respuesta.status, text.slice(0,200));
+      throw new Error('Network error fetching JSON: ' + respuesta.status);
+    }
+
+    if (!contentType.includes('application/json') && text.trim().charAt(0) !== '{') {
+      console.warn('La respuesta no parece JSON. Primeros caracteres:', text.slice(0,200));
+    }
+
+    let datos;
+    try {
+      datos = JSON.parse(text);
+    } catch (e) {
+      console.error('Error parseando JSON. Respuesta recibida (primeros 1000 chars):', text.slice(0,1000));
+      throw e;
+    }
     
     // 1. Seleccionamos el contenedor del HTML
     const contenedor = document.getElementById('reviwe-container');
