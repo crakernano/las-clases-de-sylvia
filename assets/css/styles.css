@@ -1425,4 +1425,20 @@ footer a:hover{text-decoration: underline;}
   .footer-p{padding-right: 8%;padding-left: 8%;}
 }
 
-/*style="height: 360px;" id="photo-about-me-box"*/
+@media (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
+  .photo-container{margin-right: 81px;}
+  .sylvia-header-img{margin-right: 75px;}
+  #hero-title-block{width: 60%;}
+  .hero-img-block{width: 40%;}
+  .section-title{margin-top: 2rem; margin-bottom: 1.5rem;}
+  #discovery-box-wrapper{margin-top: 0px;}
+  .discovery-box{height: 285px; max-height: 100%; min-height: 285px;}
+  .section-title{margin-top: 0px;}
+  .pr-19pct{padding-right: 5%;}
+  .service-box span{font-size: 19px;}
+  .service-box{padding-bottom: 30px;}
+  .testimonials-section{margin-bottom: 2rem;}
+  .contact-form{left: 5%;}
+  .form-contact{background-position: 50% 75%;}
+  .footer-row{width: 70%; margin-left: auto; margin-right: auto;}
+}
