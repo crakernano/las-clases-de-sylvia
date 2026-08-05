@@ -9,35 +9,64 @@ const _speed = 1500;
 const _requestedAutoplayDelay = 10; // user's preferred tiny delay
 const _autoplayDelay = _requestedAutoplayDelay < _speed ? _speed + 50 : _requestedAutoplayDelay;
 
-let swiperCard = new Swiper(".card-content", {
-  slidesPerView: _spDefault,
-  spaceBetween: 30,
-  loop: true,
-  loopFillGroupWithBlank: false,
-  loopedSlides: _cardSlides,
-  grabCursor: true,
-  speed: _speed,
-  autoplay:{
-    delay: _autoplayDelay,
-    disableOnInteraction: false,
-  },
+let swiperCard = null;
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
+function getTestimonialsSwiperConfig(slidesCount) {
+  const safeSlidesCount = Math.max(1, slidesCount);
+  return {
+    default: Math.min(2, safeSlidesCount),
+    medium: Math.min(2, safeSlidesCount),
+    large: Math.min(6, safeSlidesCount),
+  };
+}
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+function initTestimonialsSwiper() {
+  const slides = document.querySelectorAll('.card-content .swiper-slide');
+  const wrapper = document.querySelector('.card-content .swiper-wrapper');
 
-  breakpoints: {
-    600: { slidesPerView: _sp600 },
-    968: { slidesPerView: _sp968 },
-  },
-});
+  if (!wrapper || slides.length === 0) {
+    return;
+  }
+
+  if (swiperCard) {
+    swiperCard.destroy(true, true);
+    swiperCard = null;
+  }
+
+  const config = getTestimonialsSwiperConfig(slides.length);
+
+  swiperCard = new Swiper('.card-content', {
+    slidesPerView: config.default,
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: false,
+    loopedSlides: slides.length,
+    grabCursor: true,
+    speed: _speed,
+    autoplay: {
+      delay: _autoplayDelay,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    breakpoints: {
+      600: { slidesPerView: config.medium },
+      968: { slidesPerView: config.large },
+    },
+  });
+}
+
+window.initTestimonialsSwiper = initTestimonialsSwiper;
 
 // Gestión de selección de imágenes: por defecto B/N, al hacer click la imagen queda en color
 document.addEventListener('DOMContentLoaded', function () {

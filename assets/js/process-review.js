@@ -47,6 +47,7 @@ async function cargarYRenderizarReseñas() {
         <article class="card-article swiper-slide">
           <div class="card-body">
             <p>“${review.text.text}”</p>
+            <a href="${review.authorAttribution.uri}" class="stretched-link"></a>
             <div class="card-shadow"></div>
             <div class="card-footer">
               <div class="row">
@@ -71,8 +72,10 @@ async function cargarYRenderizarReseñas() {
       contenedor.innerHTML += tarjetaHTML;
     });
 
-    // 5. ¡IMPORTANTE! Si usas Swiper, debes reinicializarlo o actualizarlo aquí
-    // Ejemplo: miSwiper.update(); 
+    // 5. Reinicializamos Swiper cuando las reseñas ya están renderizadas
+    if (typeof window.initTestimonialsSwiper === 'function') {
+      window.initTestimonialsSwiper();
+    }
 
   } catch (error) {
     console.error('Error cargando o renderizando las reseñas:', error);
