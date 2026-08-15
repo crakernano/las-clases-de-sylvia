@@ -1261,6 +1261,9 @@ footer a:hover{text-decoration: underline;}
 
 /* Tablet general (cubre iPad Mini y iPad estándar) */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-custom .navbar-nav{align-items: start; padding-left: .1rem;}
+  .navbar-custom .nav-right{margin-top: 2rem;}
+
   .site-navbar{
     padding-right: 70px;
     padding-left: 70px;
@@ -1288,9 +1291,14 @@ footer a:hover{text-decoration: underline;}
   #hero-features-block h3{font-size: 18px;}
   #hero-feature-center-box{padding-left: 10px;}
   #phone-title, #phone-number{margin-left: 0px;}
-  #hero-features-block span{font-size: 0.65rem;}
-  #discovery-block h2{font-size: 40px;}
-  .service-box-subtext{padding:20px 45px}
+  /* #hero-features-block span{font-size: 0.65rem;} */
+  #hero-features-block span{font-size: 14px;}
+  #discovery-block h2{font-size: 40px; margin-top: 2rem;}
+  .service-box-subtext{padding:20px 45px; padding-top: 0px;}
+
+  #hero-title-block{width: 60%;}
+  .hero-img-block{width: 40%;}
+
   #discovery-box-wrapper{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -1370,6 +1378,21 @@ footer a:hover{text-decoration: underline;}
     padding-right: 8%;
     padding-left: 8%;
   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* body, html{background-color: #FF0000;} */
+  .discovery-box{min-height: 320px;}
+  .sp-100{display: none;}
+  .service-box p{font-size: 15px;}  
+  div.row.custom-img-galery-services div.col-12.col-md-3.service-box-item p.pr-50{padding-right: 10px;}
+  #clases-ingles-img{margin-left: 9rem;width: 600px; margin-top: 1rem;}
+  .clases-particulares-box{margin-bottom: 2rem;}
+  .order-ipad-1 { order: 1 !important; }
+  .order-ipad-2 { order: 2 !important; }
+  .order-ipad-3 { order: 3 !important; }
+  .price-row{margin-left: 2rem;}
+  .contact-form{left:20%}
 }
 
 /* iPad Pro y pantallas medianas */
@@ -1493,4 +1516,5 @@ footer a:hover{text-decoration: underline;}
   .contact-form{left: 5%;}
   .form-contact{background-position: 50% 75%;}
   .footer-row{width: 70%; margin-left: auto; margin-right: auto;}
+  .navbar-custom .navbar-nav{align-items: start; padding-left: .1rem;}
 }
