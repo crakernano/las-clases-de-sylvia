@@ -130,14 +130,46 @@ main{width: 100%;}
   white-space: nowrap;
 }
 
-/*#hero-features-block h3{font-size: 25px !important;}*/
+
 #hero-features-block h3{font-size: 25px;}
-#hero-features-block div{border-right: 1px solid #ccc; text-align: left; /*padding-left: 2rem;*/}
+
+/* ANTES DEL 17/Agosto
+#hero-features-block div{border-right: 1px solid #ccc; text-align: left; }
 #hero-features-block > div:last-child {border-right: none;}
+#hero-feature-center-box{padding-left: 3.5rem;} 
+*/
+
+#hero-features-block {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+#hero-features-block > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  padding: 0 1rem;
+}
+
+#hero-feature-center-box {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#hero-feature-center-box span {
+  white-space: nowrap;
+}
+
 #hero-data-block > div:last-child {border-right: none;}
 #hero-data-block div{border-right: 1px solid #ccc;}
 #hero-title-block{margin-top: 5rem;}
-#hero-feature-center-box{padding-left: 3.5rem;}
 .photo-container{
   /* cuadro decorativo detrás de la foto */
   width: 460px;
@@ -1303,7 +1335,8 @@ footer a:hover{text-decoration: underline;}
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 0.5rem;
-    width: 95%;   
+    width: 95%;
+    margin-top: 4rem;
   }
   .discovery-box{
     /* margin-right: -5px;
@@ -1314,7 +1347,7 @@ footer a:hover{text-decoration: underline;}
     width: 100%;
     max-width: 100%;
   }
-  #discovery-box-wrapper.row.mt-4rem div.col-12.col-md-3{width: auto;}
+  #discovery-box-wrapper.row div.col-12.col-md-3 {width: auto;}
   .discovery-box p{font-size: 15px}
   .discovery-box p.pr-50{padding-right: 1px;}
   /* #first-discovery-box{margin-left: 25px;}
@@ -1382,17 +1415,41 @@ footer a:hover{text-decoration: underline;}
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* body, html{background-color: #FF0000;} */
-  .discovery-box{min-height: 320px;}
+  /* .discovery-box{min-height: 320px;} */
+  .discovery-box{min-height: fit-content;}
   .sp-100{display: none;}
-  .service-box p{font-size: 15px;}  
+  .service-box p{font-size: 18px;}  
   div.row.custom-img-galery-services div.col-12.col-md-3.service-box-item p.pr-50{padding-right: 10px;}
   #clases-ingles-img{margin-left: 9rem;width: 600px; margin-top: 1rem;}
   .clases-particulares-box{margin-bottom: 2rem;}
   .order-ipad-1 { order: 1 !important; }
   .order-ipad-2 { order: 2 !important; }
   .order-ipad-3 { order: 3 !important; }
-  .price-row{margin-left: 2rem;}
-  .contact-form{left:20%}
+  .price-row{margin-left: 2rem; gap:3rem;}
+  /* .contact-form{left:20%} */
+  #discovery-box-wrapper{margin-top: 0px;}
+  .service-box-item .pr-50 {font-size: 15px;}
+  #clases-frances-box{width: 100%; text-align: center;}
+  #clases-frances-img{margin-left: 0px;}
+  #about-me-text{padding-right: 2.1rem;}
+
+  .form-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+  }
+
+  .contact-form {
+    position: relative;
+    left: auto;
+    right: auto;
+    margin: 0 auto;
+    width: min(100%, 591px);
+    max-width: 100%;
+    top: 0;
+  }
+  
 }
 
 /* iPad Pro y pantallas medianas */
@@ -1517,4 +1574,5 @@ footer a:hover{text-decoration: underline;}
   .form-contact{background-position: 50% 75%;}
   .footer-row{width: 70%; margin-left: auto; margin-right: auto;}
   .navbar-custom .navbar-nav{align-items: start; padding-left: .1rem;}
+  
 }
