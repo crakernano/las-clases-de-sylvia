@@ -1415,8 +1415,8 @@ footer a:hover{text-decoration: underline;}
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* body, html{background-color: #FF0000;} */
-  /* .discovery-box{min-height: 320px;} */
-  .discovery-box{min-height: fit-content;}
+  .discovery-box{min-height: 310px;}
+  /* .discovery-box{min-height: fit-content;} */
   .sp-100{display: none;}
   .service-box p{font-size: 18px;}  
   div.row.custom-img-galery-services div.col-12.col-md-3.service-box-item p.pr-50{padding-right: 10px;}
@@ -1432,10 +1432,11 @@ footer a:hover{text-decoration: underline;}
   #clases-frances-box{width: 100%; text-align: center;}
   #clases-frances-img{margin-left: 0px;}
   #about-me-text{padding-right: 2.1rem;}
+  #review-title{margin-left: 2.1rem;}
 
   .form-contact {
     display: flex;
-    justify-content: center;
+    justify-content: center;      
     align-items: center;
     background-position: center;
   }
