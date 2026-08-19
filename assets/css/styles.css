@@ -431,41 +431,7 @@ span{
 .certificate-important{
   font-family: 'Montserrat', sans-serif;
 
-/* ------------------ Ajustes para pantallas muy grandes ------------------ */
-/* Breakpoints pensados para pantallas tipo MacBook Pro Retina y monitores 4K */
-@media (min-width: 1400px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    max-width: 1400px;
-  }
 
-  h2 {
-    font-size: 72px;
-  }
-
-  .photo-container{
-    width: 520px;
-    height: 860px;
-    min-height: 860px;
-    transform: translate(40px, -40px);
-  }
-
-  .service-box{
-    padding: 100px 80px 100px 80px;
-  }
-
-  .service-box h2{
-    font-size: 56px;
-  }
-
-  .discovery-box{
-    padding-left: 48px;
-    padding-right: 48px;
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
 
 /* @media (min-width: 1600px) {
   .container { max-width: 1600px; }
@@ -1576,4 +1542,66 @@ footer a:hover{text-decoration: underline;}
   .footer-row{width: 70%; margin-left: auto; margin-right: auto;}
   .navbar-custom .navbar-nav{align-items: start; padding-left: .1rem;}
   
+}
+
+
+/* ------------------ Ajustes para pantallas muy grandes ------------------ */
+/* Breakpoints pensados para pantallas tipo MacBook Pro Retina y monitores 4K */
+@media (min-width: 1400px) and (max-width: 1599px) {  
+  /* .container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1400px;
+  } */
+
+  h2 {font-size: 72px;}
+  :root {--desktop-gutter: clamp(32px, 4vw, 64px);}
+  .sp-150{height: 100px;}
+  #first-impression-block {
+    width: calc(100% - (var(--desktop-gutter) * 2));
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* .container {
+    padding-left: var(--desktop-gutter);
+    padding-right: var(--desktop-gutter);
+  } */
+
+  .photo-container{
+    width: 520px;
+    height: 860px;
+    min-height: 860px;
+    transform: translate(40px, -40px);
+  }
+
+  .service-box{padding: 100px 80px 100px 80px;}
+  .service-box h2{font-size: 56px;}
+  .discovery-box{min-height: 350px;}
+  #revision-cv, #presentaciones-ingles-frances, #preparar-entrevistas {min-height: 220px;}
+
+  #clases-frances-img,
+  #clases-ingles-img,
+  #clases-migrar-img {
+    width: min(100%, 600px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .price-row{margin-left: 15%;}
+  .testimonials-section {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-navbar {
+    padding-left: clamp(40px, 4vw, 212px);
+    padding-right: clamp(40px, 3vw, 200px);
+  }
+
+  .footer-row{width: 100%; margin-left: 0px;}
+
+
 }
