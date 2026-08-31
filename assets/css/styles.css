@@ -140,6 +140,7 @@ main{width: 100%;}
 */
 
 #hero-features-block {
+  --hero-feature-pad: clamp(0.75rem, 1.5vw, 4.25rem);
   display: flex;
   align-items: stretch;
   width: 100%;
@@ -153,14 +154,17 @@ main{width: 100%;}
   align-items: center;
   text-align: center;
   border-right: 1px solid #ccc;
-  padding: 0 1rem;
+  padding-left: var(--hero-feature-pad);
+  padding-right: var(--hero-feature-pad);
+  box-sizing: border-box;
 }
 
 #hero-feature-center-box {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: var(--hero-feature-pad);
+  padding-right: var(--hero-feature-pad);
   text-align: center;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 
 #hero-feature-center-box span {
@@ -433,19 +437,13 @@ span{
 
 
 
+
 /* @media (min-width: 1600px) {
   .container { max-width: 1600px; }
   h2 { font-size: 84px; }
   .photo-container{ width: 600px; height: 900px; min-height: 900px; transform: translate(50px, -50px); }
   body { font-size: 18px; }
 }
-
-@media (min-width: 1920px) {
-  .container { max-width: 1800px; }
-  h2 { font-size: 96px; }
-  body { font-size: 19px; }
-  .service-box { padding: 120px 120px; }
-} */
 
 /* ----------------------------------------------------------------------- */
   font-weight: 700;
@@ -1125,6 +1123,7 @@ footer a:hover{text-decoration: underline;}
     margin-bottom: 1.5rem;
     /*margin-left: 20px;*/ 
   }
+  #hero-features-block {--hero-feature-pad: 0.75rem;}
   .testimonials-section{margin-left: 0;}
   .form-check-label{font-size: 13px;}
   .contact-form {
@@ -1261,7 +1260,12 @@ footer a:hover{text-decoration: underline;}
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar-custom .navbar-nav{align-items: start; padding-left: .1rem;}
   .navbar-custom .nav-right{margin-top: 2rem;}
-
+  .order-ipad-1 { order: 1 !important; }
+  .order-ipad-2 { order: 2 !important; }
+  .order-ipad-3 { order: 3 !important; }
+  .sp-100{display: none;}
+  #clases-ingles-img{margin-left: 9rem; width: 600px; margin-top: 3rem;}
+  #clases-migrar-img{margin-top: 3rem;}
   .site-navbar{
     padding-right: 70px;
     padding-left: 70px;
@@ -1286,14 +1290,19 @@ footer a:hover{text-decoration: underline;}
     min-height: 460px;
     height: 460px;
   }
+  #hero-features-block {--hero-feature-pad: 1rem;}
   #hero-features-block h3{font-size: 18px;}
   #hero-feature-center-box{padding-left: 10px;}
+  #hero-feature-last-box{border-right: 0px !important;}
   #phone-title, #phone-number{margin-left: 0px;}
   /* #hero-features-block span{font-size: 0.65rem;} */
   #hero-features-block span{font-size: 14px;}
   #discovery-block h2{font-size: 40px; margin-top: 2rem;}
-  .service-box-subtext{padding:20px 45px; padding-top: 0px;}
-
+  .discovery-box{margin-top: 0px;}
+  .service-box-subtext{padding:20px 45px; padding-top: 0px; font-size: 18px !important;}
+  div#discovery-section.container div#clases-online.container.service-box.mt-4rem div.row.custom-img-galery-services div.col-12.col-md-3.service-box-item p.pr-50{
+    padding-right: 10px;
+  }
   #hero-title-block{width: 60%;}
   .hero-img-block{width: 40%;}
 
@@ -1302,14 +1311,15 @@ footer a:hover{text-decoration: underline;}
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 0.5rem;
     width: 95%;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .discovery-box{
     /* margin-right: -5px;
     margin-left: 0px; */
     padding-right: 15px;
     padding-left: 20px;
-    min-height: 400px;
+    /* min-height: 400px; */
+    min-height: 325px;
     width: 100%;
     max-width: 100%;
   }
@@ -1331,10 +1341,11 @@ footer a:hover{text-decoration: underline;}
     /* margin-right: 2.1rem; */
     /* margin-left: 2.1rem; */
   }
+  
   #first-custom-img-item{margin-left: 2.1rem;}
   #medium-custom-img-item{margin-left: 20px;}
   #last-custom-img-item{margin-right: 2.1rem;}
-  #revision-cv, #presentaciones-ingles-frances, #preparar-entrevistas{margin-left: 2rem; margin-right: 2rem; min-height: 270px;}
+  #revision-cv, #presentaciones-ingles-frances, #preparar-entrevistas{margin-left: 2rem; margin-right: 2rem; min-height: 300px;}
   #photo-about-me-box{
     width: 100%;
     text-align: center;
@@ -1372,6 +1383,7 @@ footer a:hover{text-decoration: underline;}
     margin-right: 5%;
     font-size: 14px;
   }
+  .form-contact{background-position: 50% 75%;}
   #footer-sylvia-name{font-size: 18px;}
   .footer-p{
     padding-right: 8%;
@@ -1439,6 +1451,7 @@ footer a:hover{text-decoration: underline;}
     min-height: 460px;
     height: 460px;
   }
+  #hero-features-block {--hero-feature-pad: 1.5rem;}
   #hero-features-block h3{font-size: 18px;}
   #hero-feature-center-box{padding-left: 10px;}
   #phone-title, #phone-number{margin-left: 0px;}
@@ -1548,6 +1561,7 @@ footer a:hover{text-decoration: underline;}
 /* ------------------ Ajustes para pantallas muy grandes ------------------ */
 /* Breakpoints pensados para pantallas tipo MacBook Pro Retina y monitores 4K */
 @media (min-width: 1400px) and (max-width: 1599px) {  
+  
   /* .container{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1568,17 +1582,23 @@ footer a:hover{text-decoration: underline;}
     padding-left: var(--desktop-gutter);
     padding-right: var(--desktop-gutter);
   } */
-
+  #hero-features-block > div {align-items: start;}
+  #hero-features-block{width: 120%; --hero-feature-pad: 4rem;}
+  #hero-feature-center-box{padding-left: 70px;padding-right: 70px;}
+  #hero-feature-last-box{border-right: 0px !important; padding-left: 70px;} 
+  #phone-title, #phone-number{margin-left: 0px;}
   .photo-container{
-    width: 520px;
-    height: 860px;
-    min-height: 860px;
-    transform: translate(40px, -40px);
+    width: 470px;
+    height: 730px;
+    min-height: 730px;
+    transform: translate(45px, -40px);
   }
 
   .service-box{padding: 100px 80px 100px 80px;}
   .service-box h2{font-size: 56px;}
-  .discovery-box{min-height: 350px;}
+  .discovery-box{min-height: 350px; margin-top: 1.5rem;}
+  .service-box-subtext{margin-top: 1rem;}
+  div#discovery-block.container h2.section-title{margin-bottom: 0px;}
   #revision-cv, #presentaciones-ingles-frances, #preparar-entrevistas {min-height: 220px;}
 
   #clases-frances-img,
@@ -1601,7 +1621,7 @@ footer a:hover{text-decoration: underline;}
     padding-right: clamp(40px, 3vw, 200px);
   }
 
-  .footer-row{width: 100%; margin-left: 0px;}
+  .footer-row{width: 80%; margin-left: 9%;}
 
 
 }
@@ -1677,4 +1697,13 @@ footer a:hover{text-decoration: underline;}
     display: none;
   }
   .pr-50{padding-right: 0px;}
+}
+
+@media (min-width: 1920px) {
+  .photo-container{ height: 690px; min-height: 700px;}
+  #hero-features-block > div {align-items: start;}
+  #hero-features-block{width: 120%; --hero-feature-pad: 4.75rem;}
+  /* #hero-feature-center-box{padding-left: 70px !important;padding-right: 70px !important;} */
+  #hero-feature-last-box{border-right: 0px !important; padding-left: 70px;} 
+  #phone-title, #phone-number{margin-left: 0px;}
 }
