@@ -192,9 +192,7 @@ main{width: 100%;}
   transition: color 0.4s ease;
 }
 
-#phone-number a:hover {
-  color: #0066FF;
-  /* text-decoration: underline; */
+#phone-number a:hover {color: #0066FF;
 }
 span{
   font-family: "DM Sans", sans-serif;
@@ -1406,7 +1404,7 @@ footer a:hover{text-decoration: underline;}
   .sp-100{display: none;}
   .service-box p{font-size: 18px;}  
   div.row.custom-img-galery-services div.col-12.col-md-3.service-box-item p.pr-50{padding-right: 10px;}
-  #clases-ingles-img{margin-left: 9rem;width: 600px; margin-top: 1rem;}
+  #clases-ingles-img{width: 600px; margin-top: 1rem;}
   .clases-particulares-box{margin-bottom: 2rem;}
   .order-ipad-1 { order: 1 !important; }
   .order-ipad-2 { order: 2 !important; }
