@@ -194,7 +194,8 @@ main{width: 100%;}
   border: 3px solid transparent;
   transform: translate(30px, -30px); /* ligero desplazamiento para quedar visible detrás */
 }
-#phone-title, #phone-number{margin-left: 3rem;}
+/*#phone-title, #phone-number{margin-left: 3rem;}*/
+#phone-title, #phone-number{margin-left: 0;}
 
 #phone-number a {
   color: #000;
@@ -564,6 +565,10 @@ li{
 .additional-services-item{
   list-style: none !important;
 }
+
+#additional-services-box ul{padding-left: 0px;}
+#exam-block ul{padding-left: 0px;}
+#conditions-block{margin-top: 1rem;}
 .card-avatar{
   width: 60px;
   height: 60px;
@@ -967,6 +972,12 @@ footer a:hover{text-decoration: underline;}
   #hero-wrapper .col-md-6:last-child{justify-content: center;}
   .hero-title{font-size: 42px; padding-right: 0; margin-left: 2.1rem; margin-top: 1rem; margin-right: 2.1rem;}
   #hero-title-block{margin-top: 0px;}
+  #hero-title-block > .contact-btn {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin: 2rem auto 0;
+  }
   .hero-lead{padding-right: 1rem;}
   .hero-lead p{margin-left: 10;}
   #hero-features-block span{margin-left: 2.1rem}  
@@ -1716,7 +1727,8 @@ footer a:hover{text-decoration: underline;}
 
 @media (min-width: 1920px) {
   .photo-container{ height: 690px; min-height: 700px;}
-  #hero-features-block > div {align-items: start;}
+  /*#hero-features-block > div {align-items: start;}*/
+  #hero-features-block > div {align-items: center;}
   #hero-features-block{width: 120%;}
   #hero-feature-center-box{padding-left: 70px !important;padding-right: 70px !important;}
   #hero-feature-last-box{border-right: 0px !important; padding-left: 70px;} 
