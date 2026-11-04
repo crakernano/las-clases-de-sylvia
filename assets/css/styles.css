@@ -564,6 +564,10 @@ li{
 .additional-services-item{
   list-style: none !important;
 }
+
+#additional-services-box ul{padding-left: 0px;}
+#exam-block ul{padding-left: 0px;}
+#conditions-block{margin-top: 1rem;}
 .card-avatar{
   width: 60px;
   height: 60px;
