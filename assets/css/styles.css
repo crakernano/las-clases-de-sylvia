@@ -129,6 +129,9 @@ main{width: 100%;}
   transform: scale(1.02);
 }
 
+.navbar-custom .nav-link:hover{
+  color: #0066FF;
+}
 /*---------- */
 
 .navbar-custom .nav-right{
@@ -707,6 +710,8 @@ li{
   width: auto;
 }
 
+footer a:hover .social-icon{color:#0066FF;}
+
 footer{
   background-color: #1A213E;
   max-width: 100% !important;
@@ -1261,6 +1266,35 @@ footer a:hover{text-decoration: underline;}
 .thanks-subtext{font-size: 20px;}
 .return-link{margin-left: 2rem;}
 
+#hero-features-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#hero-features-block > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#hero-features-block h3 {
+  width: 100%;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  text-align: center;
+}
+
+#hero-features-block span {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 }
 
 @media (max-width: 480px) {
@@ -1729,7 +1763,7 @@ footer a:hover{text-decoration: underline;}
   .photo-container{ height: 690px; min-height: 700px;}
   /*#hero-features-block > div {align-items: start;}*/
   #hero-features-block > div {align-items: center;}
-  #hero-features-block{width: 120%;}
+  #hero-features-block{width: 120%; margin-left: -4rem;}
   #hero-feature-center-box{padding-left: 70px !important;padding-right: 70px !important;}
   #hero-feature-last-box{border-right: 0px !important; padding-left: 70px;} 
   #phone-title, #phone-number{margin-left: 0px;}
