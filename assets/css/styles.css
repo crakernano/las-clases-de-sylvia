@@ -418,6 +418,8 @@ span{
   /*margin-left: 1.5rem;*/
 
 }
+.clases-particulares-box .order-1{width: 60%;}
+#clases-frances-box{width: 40%;}
 #clases-frances-img{
   margin-left: 9rem;
   width: 600px;
@@ -1270,6 +1272,8 @@ footer a:hover{text-decoration: underline;}
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #hero-features-block > div {
