@@ -795,9 +795,7 @@ footer a{
 .card-container .swiper-wrapper::-webkit-scrollbar { display: none; }
 
 /* Ajustes del banner hero: eliminar gutters/padding extra para acercar la columna derecha */
-#hero-wrapper {
-  width: 100%;
-}
+#hero-wrapper {width: 100%;}
 /* Alineamos la columna derecha al borde: eliminamos padding y empujamos su contenido a la derecha */
 #hero-wrapper > .col-12, #hero-wrapper > .col-md-6 {
   padding-left: 0;
@@ -1391,9 +1389,18 @@ footer a:hover{text-decoration: underline;}
     margin-right: clamp(0px, 3.9vw, 40px);
   }
 
+  /* #hero-feature-center-box,
+  #hero-feature-center-box span {white-space: normal;}
+  #hero-feature-center-box{padding-left: 10px;} */
+
   #hero-feature-center-box,
   #hero-feature-center-box span {
-    white-space: normal;
+    white-space: nowrap;
+  }
+
+  #hero-feature-center-box {
+    padding-left: 8px;
+    padding-right: 8px;
   }
   /*
   .hero-title{
@@ -1419,7 +1426,6 @@ footer a:hover{text-decoration: underline;}
     height: 460px;
   }*/
   #hero-features-block h3{font-size: 18px; text-align: left;}
-  #hero-feature-center-box{padding-left: 10px;}
   #hero-feature-last-box{border-right: 0px !important;}
   #phone-title, #phone-number{margin-left: 0px;}
   /* #hero-features-block span{font-size: 0.65rem;} */
@@ -1543,6 +1549,9 @@ footer a:hover{text-decoration: underline;}
   min-width: 0;
   padding-inline: 0.5rem;
 }
+
+#hero-features-block > #hero-feature-center-box {padding-inline: 1rem;}
+
   #clases-online {
     width: 100%;
     padding-left: 32px;
@@ -1913,7 +1922,6 @@ footer a:hover{text-decoration: underline;}
   }
   
   #hero-features-block h3,
-  #hero-features-block span {
-    text-align: left;
-  }
+  #hero-features-block span {text-align: left;}
+  #hero-features-block #hero-feature-last-box{align-items: flex-end; }
 }
