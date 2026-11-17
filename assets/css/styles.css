@@ -1923,5 +1923,5 @@ footer a:hover{text-decoration: underline;}
   
   #hero-features-block h3,
   #hero-features-block span {text-align: left;}
-  #hero-features-block #hero-feature-last-box{align-items: flex-end; }
+  #hero-features-block #hero-feature-last-box{align-items: flex-start; padding-left: 70px; }
 }
