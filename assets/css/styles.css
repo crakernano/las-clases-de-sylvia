@@ -8,12 +8,22 @@
 }
 
 html, body {
-  height: 100%;
+  /*height: 100%;*/
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  overflow-y: auto; /* permitir un único scroll vertical del documento */
+  /*overflow-y: auto;*/
 
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -119,6 +129,9 @@ main{width: 100%;}
   transform: scale(1.02);
 }
 
+.navbar-custom .nav-link:hover{
+  color: #0066FF;
+}
 /*---------- */
 
 .navbar-custom .nav-right{
@@ -167,6 +180,7 @@ main{width: 100%;}
   white-space: nowrap;
 }
 
+
 #hero-data-block > div:last-child {border-right: none;}
 #hero-data-block div{border-right: 1px solid #ccc;}
 #hero-title-block{margin-top: 5rem;}
@@ -184,7 +198,8 @@ main{width: 100%;}
   border: 3px solid transparent;
   transform: translate(30px, -30px); /* ligero desplazamiento para quedar visible detrás */
 }
-#phone-title, #phone-number{margin-left: 3rem;}
+/*#phone-title, #phone-number{margin-left: 3rem;}*/
+#phone-title, #phone-number{margin-left: 0;}
 
 #phone-number a {
   color: #000;
@@ -404,6 +419,8 @@ span{
   /*margin-left: 1.5rem;*/
 
 }
+.clases-particulares-box .order-1{width: 60%;}
+#clases-frances-box{width: 40%;}
 #clases-frances-img{
   margin-left: 9rem;
   width: 600px;
@@ -542,7 +559,7 @@ li{
   color: #050B20;
   padding-left: 0px;
 }
-.additional-services-title{
+.additional-services-title, .exam-service-title{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-style: bold;
@@ -554,6 +571,10 @@ li{
 .additional-services-item{
   list-style: none !important;
 }
+
+#additional-services-box ul{padding-left: 0px;}
+#exam-block ul{padding-left: 0px;}
+#conditions-block{margin-top: 1rem;}
 .card-avatar{
   width: 60px;
   height: 60px;
@@ -692,6 +713,8 @@ li{
   width: auto;
 }
 
+footer a:hover .social-icon{color:#0066FF;}
+
 footer{
   background-color: #1A213E;
   max-width: 100% !important;
@@ -772,9 +795,7 @@ footer a{
 .card-container .swiper-wrapper::-webkit-scrollbar { display: none; }
 
 /* Ajustes del banner hero: eliminar gutters/padding extra para acercar la columna derecha */
-#hero-wrapper {
-  width: 100%;
-}
+#hero-wrapper {width: 100%;}
 /* Alineamos la columna derecha al borde: eliminamos padding y empujamos su contenido a la derecha */
 #hero-wrapper > .col-12, #hero-wrapper > .col-md-6 {
   padding-left: 0;
@@ -938,8 +959,8 @@ footer a:hover{text-decoration: underline;}
    Media queries - Inicio
    Añade y ajusta reglas para la versión mobile.
    ======================= */
-
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {*/
+@media (max-width: 767.98px) {
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap');
   html, body { overflow-x: hidden; }
   *, *::before, *::after { box-sizing: border-box; }
@@ -957,6 +978,12 @@ footer a:hover{text-decoration: underline;}
   #hero-wrapper .col-md-6:last-child{justify-content: center;}
   .hero-title{font-size: 42px; padding-right: 0; margin-left: 2.1rem; margin-top: 1rem; margin-right: 2.1rem;}
   #hero-title-block{margin-top: 0px;}
+  #hero-title-block > .contact-btn {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin: 2rem auto 0;
+  }
   .hero-lead{padding-right: 1rem;}
   .hero-lead p{margin-left: 10;}
   #hero-features-block span{margin-left: 2.1rem}  
@@ -1112,6 +1139,8 @@ footer a:hover{text-decoration: underline;}
   .additional-services-item{font-size: 13px; margin-left: 2.1rem;}
   #conditions-block{font: 1em sans-serif; margin-top: 1rem;}
   #conditions-block p{font-size: 13px;}
+  #conditions-block ul {padding-left: 0;}
+  #conditions-block .additional-services-item {margin-left: 2.1rem;}
 
   .form-contact {
     display: flex;
@@ -1240,24 +1269,77 @@ footer a:hover{text-decoration: underline;}
 .thanks-subtext{font-size: 20px;}
 .return-link{margin-left: 2rem;}
 
+#hero-features-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#hero-features-block > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#hero-features-block h3 {
+  width: 100%;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  text-align: center;
+}
+
+#hero-features-block span {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 }
 
 @media (max-width: 480px) {
-  /* Ajustes para pantallas pequeñas
-  h2 { font-size: 28px; }
-  h3 { font-size: 20px; }
-  p  { font-size: 14px; line-height: 1.5; }
-  .container { padding: 0.75rem; }
+  #hero-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-  .navbar-custom .navbar-nav { gap: 0.5rem; }
-  .contact-form { padding: 16px; }
-  .contact-form .form-control, .contact-form .form-textarea { padding: 1rem; }
+  #hero-wrapper > #hero-title-block {
+    width: 100%;
+    padding-left: 0;
+  }
 
-  /* Ocultar decoraciones que consumen espacio en pantallas muy pequeñas */
-  /* .photo-container, .photo-frame, .contact-btn::after { display: none; } */
+  #hero-features-block {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-  /* .service-box { padding: 24px; }
-  .discovery-box { padding: 18px; } */
+  #hero-features-block > div {
+    flex: 0 0 auto;
+    width: min(100%, 15rem);
+    margin-right: auto;
+    margin-left: auto;
+    align-items: flex-start;
+    padding: 0;
+    text-align: center;
+  }
+
+  #hero-features-block h3,
+  #hero-features-block span {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  #hero-features-block > #hero-feature-center-box {
+    padding-left: 0;
+  }
 }
 
 /* Tablet general (cubre iPad Mini y iPad estándar) */
@@ -1277,40 +1359,85 @@ footer a:hover{text-decoration: underline;}
     padding-right: 70px;
     padding-left: 70px;
   }
+
+  #hero-wrapper > #hero-title-block {
+    width: 60%;
+    padding-left: clamp(1rem, 6.35vw, 4.1rem);
+  }
+
+  #hero-wrapper > .hero-img-block {
+    width: 40%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 3.42vw, 35px);
+  }
+
+  .sylvia-header-img {
+    width: clamp(220px, 28.7vw, 294px);
+    max-width: 100%;
+    margin-right: clamp(0px, 4.5vw, 46px);
+  }
+
+  .photo-container {
+    width: clamp(200px, 25.4vw, 260px);
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+    margin-right: clamp(0px, 3.9vw, 40px);
+  }
+
+  /* #hero-feature-center-box,
+  #hero-feature-center-box span {white-space: normal;}
+  #hero-feature-center-box{padding-left: 10px;} */
+
+  #hero-feature-center-box,
+  #hero-feature-center-box span {
+    white-space: nowrap;
+  }
+
+  #hero-feature-center-box {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  /*
   .hero-title{
     font-size: 35px;
-    /* margin-left: 4.1rem; */
+    
   }
   #hero-title-block{
-    /*margin-left: 4.1rem;*/
+    
     margin-top: 0px;
   }
   #hero-wrapper > .col-12, #hero-wrapper > .col-md-6 {padding-left: 4.1rem;}
+
   .hero-lead{padding-right: 0px;}
+  /*
   .sylvia-header-img{
     width: 294px;
     margin-right: 46px;
-  }
-  .photo-container{
+  }*/
+  /*.photo-container{
     width: 260px;
     margin-right: 40px;
     min-height: 460px;
     height: 460px;
-  }
-  #hero-features-block h3{font-size: 18px;}
-  #hero-feature-center-box{padding-left: 10px;}
+  }*/
+  #hero-features-block h3{font-size: 18px; text-align: left;}
   #hero-feature-last-box{border-right: 0px !important;}
   #phone-title, #phone-number{margin-left: 0px;}
   /* #hero-features-block span{font-size: 0.65rem;} */
-  #hero-features-block span{font-size: 14px;}
+  /*#hero-features-block span{font-size: 14px; text-align: left;}*/
   #discovery-block h2{font-size: 40px; margin-top: 2rem;}
   .discovery-box{margin-top: 0px;}
   .service-box-subtext{padding:20px 45px; padding-top: 0px; font-size: 18px !important;}
   div#discovery-section.container div#clases-online.container.service-box.mt-4rem div.row.custom-img-galery-services div.col-12.col-md-3.service-box-item p.pr-50{
     padding-right: 10px;
   }
-  #hero-title-block{width: 60%;}
-  .hero-img-block{width: 40%;}
+  /*#hero-title-block{width: 60%;}*/
+  /*.hero-img-block{width: 40%;}*/
 
   #discovery-box-wrapper{
     display: grid;
@@ -1359,12 +1486,23 @@ footer a:hover{text-decoration: underline;}
     
   }
 
-  .price-row{
-    margin-left: 1.1rem;
-    margin-top: 0px;
+  .price-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 10px;
   }
 
-  .price-box{margin-right: 20px;}
+  .price-row > .price-box {
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    flex: initial;
+  }
   .class-type-tag{width: 145px;}
   .about-me-img{max-width: 100%; height: auto;}
   div#about-me{height: fit-content;}
@@ -1380,8 +1518,13 @@ footer a:hover{text-decoration: underline;}
   #about-me h2{font-size: 32px; margin-top: 2rem;}
   .sp-150{display: none;}
 
-  #conditions-block{width: 100%;}
-  .additional-services-title{margin-left: 2.1rem;}
+  /*#conditions-block{width: 100%;}*/
+  .additional-services-title{font-size: 13px;}
+  .additional-services-item{font-size: 12px;}
+  .exam-service-title{font-size: 13px; margin-left: 2.1rem;}
+  #exam-block ul{padding-left: 2rem;}
+  #conditions-block{margin-top: 2rem;}
+  
   .contact-form{left: 15%;}
   .footer-row{
     width: 90%;
@@ -1395,6 +1538,68 @@ footer a:hover{text-decoration: underline;}
     padding-right: 8%;
     padding-left: 8%;
   }
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+
+#hero-features-block {width: min(170%, calc(100vw - 5rem));}
+.hero-lead{padding-right: 0%;}
+
+#hero-features-block > div {
+  min-width: 0;
+  padding-inline: 0.5rem;
+}
+
+#hero-features-block > #hero-feature-center-box {padding-inline: 1rem;}
+
+  #clases-online {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  #clases-online .custom-img-galery-services {
+    --bs-gutter-x: 2rem;
+  }
+
+  #clases-online .service-box-item .service-box-subtitle {
+    display: block;
+    min-height: 2.6em;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  #discovery-box-wrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #discovery-box-wrapper > div {
+    min-width: 0;
+    padding: 0;
+  }
+
+  .discovery-box {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 1.25rem 0.65rem;
+  }
+
+  .discovery-box span {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .discovery-box p {
+    font-size: 13px;
+    line-height: 1.35;
+    padding-right: 0;
+  }
+  #revision-cv, #presentaciones-ingles-frances, #preparar-entrevistas{min-height: 400px;}
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -1417,7 +1622,6 @@ footer a:hover{text-decoration: underline;}
   #clases-frances-img{margin-left: 0px;}
   #about-me-text{padding-right: 2.1rem;}
   #review-title{margin-left: 2.1rem;}
-
   .form-contact {
     display: flex;
     justify-content: center;      
@@ -1706,9 +1910,18 @@ footer a:hover{text-decoration: underline;}
 
 @media (min-width: 1920px) {
   .photo-container{ height: 690px; min-height: 700px;}
-  #hero-features-block > div {align-items: start;}
-  #hero-features-block{width: 120%;}
+  /*#hero-features-block > div {align-items: start;}*/
+  #hero-features-block > div {align-items: center;}
+  #hero-features-block{width: 120%; /*margin-left: -4rem;*/}
   #hero-feature-center-box{padding-left: 70px !important;padding-right: 70px !important;}
-  #hero-feature-last-box{border-right: 0px !important; padding-left: 70px;} 
+  #hero-feature-last-box{border-right: 0px !important; padding-left: 70px; align-items: center;} 
   #phone-title, #phone-number{margin-left: 0px;}
+  #hero-features-block > div {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  #hero-features-block h3,
+  #hero-features-block span {text-align: left;}
+  #hero-features-block #hero-feature-last-box{align-items: flex-start; padding-left: 70px; }
 }

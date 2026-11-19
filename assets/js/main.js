@@ -158,6 +158,48 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!matched) setActive(null);
   }
 
+  function smoothScrollTo(target, duration = 2400) {
+    
+    const startY = window.scrollY;
+    const distance = target.getBoundingClientRect().top;
+    const startTime = performance.now();
+
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+
+      // Acelera al principio y frena gradualmente al final.
+      const eased = progress < 0.5
+        ? 4 * progress ** 3
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      window.scrollTo(0, startY + distance * eased);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  document.querySelectorAll('a[href="#contact-form"]').forEach(link => {
+    
+    link.addEventListener('click', event => {
+      const target = document.getElementById('contact-form');
+      if (!target) return;
+
+      event.preventDefault();
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        target.scrollIntoView();
+      } else {
+        smoothScrollTo(target);
+      }
+
+      history.pushState(null, '', '#contact-form');
+    });
+  });
+  
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('hashchange', onScroll);
   window.addEventListener('resize', onScroll);
